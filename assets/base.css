@@ -139,3 +139,20 @@ details.altro[open] summary { margin-bottom: 2px; }
 @media (max-width: 820px) { .tre { grid-template-columns: 1fr; } }
 .fonti-gruppi { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px 24px; }
 .fonti-gruppi ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 8px; font-size: 0.9rem; }
+
+/* obiettivo e che cosa dimostrano i prototipi */
+.obiettivo { display: grid; gap: 8px; padding: 18px 20px; border-left: 6px solid var(--inchiostro); background: var(--tinta); border-radius: 0 6px 6px 0; }
+.obiettivo p { font-size: 1.25rem; line-height: 1.4; font-weight: 600; max-width: 60ch; }
+.obiettivo b { font-weight: 800; }
+.obiettivo small { color: var(--tenue); font-size: 0.82rem; }
+.sotto-h { font-size: 1.15rem; margin-top: 8px; }
+.dimostra { display: grid; gap: 8px; }
+.dm-riga { display: grid; grid-template-columns: 170px 1fr 1.4fr 1fr; gap: 14px; padding: 12px 14px; border-left: 5px solid; border-radius: 0 6px 6px 0; font-size: 0.92rem; line-height: 1.4; align-items: start; }
+.dm-1 { border-color: var(--segno-disp); background: var(--fondo-disp); }
+.dm-2 { border-color: var(--segno-corp); background: var(--fondo-corp); }
+.dm-3 { border-color: var(--segno-sim); background: var(--fondo-sim); }
+.dm-nome { font-weight: 800; font-size: 1rem; color: var(--inchiostro); text-decoration: none; display: grid; gap: 2px; }
+.dm-nome span { font-size: 1.6rem; line-height: 1; color: var(--tenue); }
+.dm-nome:hover { text-decoration: underline; }
+.dm-et { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tenue); margin-bottom: 2px; }
+@media (max-width: 820px) { .dm-riga { grid-template-columns: 1fr; gap: 8px; } .dm-nome { grid-auto-flow: column; justify-content: start; gap: 8px; align-items: baseline; } }

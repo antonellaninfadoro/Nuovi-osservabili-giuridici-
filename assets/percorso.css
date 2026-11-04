@@ -77,3 +77,5 @@
   .catena li { grid-template-columns: auto 1fr; gap: 6px; align-items: baseline; }
   .catena li:not(:last-child)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -15px; transform: translateX(-50%); }
 }
+
+.cifre.l4 div { border-color: var(--segno-sim); background: var(--fondo-sim); } .cifre.l4 b { color: var(--segno-sim); font-size: 1.45rem; }

@@ -19,6 +19,7 @@
     <a href="index.html" aria-current="page">Il framework</a>
     <a class="n1" href="testo/index.html">Primo prototipo · La disposizione</a>
     <a class="n2" href="relazioni/index.html">Secondo prototipo · Le relazioni</a>
+    <a class="n3" href="fasi-successive/simulazione/index.html">Terzo prototipo · La tutela applicata</a>
   </nav>
   <span class="etichetta">Tesi di laurea · Università degli Studi del Sannio · A.A. 2025/2026</span>
   <figure class="emblema">
@@ -32,6 +33,35 @@
 
 
 <section class="introduzione" aria-labelledby="t-intro">
+  <div class="obiettivo">
+    <span class="etichetta">L'obiettivo della tesi</span>
+    <p>Mostrare che le <b>qualità</b> e gli <b>effetti</b> di una legge si possono rendere osservabili con strumenti computazionali: dal <b>testo</b> che riconosce una tutela fino alle <b>persone</b> che riescono davvero a usarla.</p>
+    <small>Caso di studio: i permessi lavorativi dell'art. 33 della legge 104/1992. Tesi, cap. IV, §§ 1-2.</small>
+  </div>
+
+  <h3 class="sotto-h">Che cosa dimostrano i tre prototipi</h3>
+  <div class="dimostra">
+    <div class="dm-riga dm-1">
+      <a class="dm-nome" href="testo/index.html"><span>1</span>La disposizione</a>
+      <div><span class="dm-et">Domanda</span>Che cosa si può misurare nel testo dell'art. 33?</div>
+      <div><span class="dm-et">Dimostra</span>Un programma riconosce commi, rinvii, lessico e leggibilità nel testo reale, con risultati controllati a mano. Esempio: <b>la stessa condizione è chiamata in 3 modi</b>.</div>
+      <div><span class="dm-et">Non dimostra</span>Che la norma sia scritta male o ingiusta.</div>
+    </div>
+    <div class="dm-riga dm-2">
+      <a class="dm-nome" href="relazioni/index.html"><span>2</span>Le relazioni</a>
+      <div><span class="dm-et">Domanda</span>Da quali altre norme dipende la tutela?</div>
+      <div><span class="dm-et">Dimostra</span>I collegamenti si possono raccogliere e classificare in modo controllabile: <b>20 atti</b>, <b>10 relazioni</b> già verificate sul testo.</div>
+      <div><span class="dm-et">Non dimostra</span>Che più collegamenti significhino una legge peggiore.</div>
+    </div>
+    <div class="dm-riga dm-3">
+      <a class="dm-nome" href="fasi-successive/simulazione/index.html"><span>3</span>La tutela applicata</a>
+      <div><span class="dm-et">Domanda</span>Da che cosa può dipendere lo scarto fra chi ha diritto e chi usa i permessi?</div>
+      <div><span class="dm-et">Dimostra</span>Una simulazione con persone più o meno informate rende esplicite le ipotesi e mostra <b>quale passaggio pesa di più</b>: nel modello, l'informazione.</div>
+      <div><span class="dm-et">Non dimostra</span>Quante persone restino davvero escluse: i numeri sono ipotetici.</div>
+    </div>
+  </div>
+  <p class="nota">Una procedura che funziona non è ancora conoscenza empirica validata. I prototipi ottengono il primo risultato e preparano il secondo (tesi, cap. IV, § 2, p. 121).</p>
+
   <h2 id="t-intro">Di che cosa parliamo, perché, e che cosa aggiunge la tesi</h2>
   <div class="tre">
     <div class="tre-c">
@@ -158,7 +188,7 @@
         <p>Il terzo livello esce dal testo ed entra nei dati sui destinatari. Attribuire un effetto a una norma richiede un disegno di ricerca adeguato. Il primo passo è costruire l'osservabile giusto.</p>
         <p>I lavoratori privati che usano i permessi passano da <b>445.167</b> nel 2020 a <b>608.206</b> nel 2024 (INPS, come citato nella tesi). Manca il dato più importante: quante persone avrebbero diritto ai permessi senza riuscire a ottenerli. L'osservabile da costruire è il non accesso: chi ha i requisiti e non usa la tutela, dove e perché.</p>
       </details>
-      <p class="nota stato-liv"><b>Solo racconto.</b> In questa prima versione il terzo livello è presentato come racconto. Il prototipo dedicato è previsto in una fase successiva.</p>
+      <p class="nota stato-liv"><b>Dati ufficiali, pochi.</b> In questa prima versione il terzo livello è presentato come racconto; i dati disponibili e il dato mancante sono raccolti nel terzo prototipo, una pagina di prova da sottoporre al relatore.</p>
     </article>
 
     <article class="passo" data-passo="4">
@@ -176,7 +206,12 @@
         <p>La simulazione costruisce mondi possibili: che cosa accadrebbe con altre regole, altri tempi, altra informazione. I suoi risultati dipendono dalle ipotesi e vanno letti con l'analisi di sensibilità. Estende l'osservazione verso i possibili e non la sostituisce.</p>
         <p>Per l'art. 33 si potrebbe simulare una popolazione ipotetica di aventi diritto che attraversa i passaggi ricostruiti nel primo prototipo: conoscere il diritto, ottenere l'accertamento, presentare la domanda, fruire dei permessi. Variando tempi e informazione si vedrebbe quale passaggio pesa di più.</p>
       </details>
-      <p class="nota stato-liv"><b>Solo racconto.</b> Anche il quarto livello, in questa versione, è solo descritto. Una simulazione sarebbe un esperimento illustrativo basato su ipotesi esplicite, non una rappresentazione degli effetti reali.</p>
+      <div class="cifre l4">
+        <div><b>47,8% → 62,2%</b><span>persone che arrivano a fruire, se gli informati passano dal 40% al 90%</span></div>
+        <div><b>39% → 50,8%</b><span>nel territorio con l'accertamento più lento, se i tempi diventano uguali</span></div>
+      </div>
+      <p class="nota stato-liv"><b>Numeri ipotetici.</b> Esiti di una simulazione illustrativa con 1.000 persone, non calibrata su dati reali. Indicano quali dati raccogliere: quante persone conoscono il diritto, i tempi di accertamento per territorio, gli ostacoli sul lavoro. Una simulazione è un esperimento illustrativo basato su ipotesi esplicite, non una rappresentazione degli effetti reali.</p>
+      <a class="vai" href="fasi-successive/simulazione/index.html">Terzo prototipo · La tutela applicata →</a>
     </article>
 
     <article class="passo" data-passo="5">
@@ -198,7 +233,7 @@
 
 <section aria-labelledby="t-tre">
   <h2 id="t-tre">Tre prototipi per quattro livelli</h2>
-  <p class="tesi">La tesi prevede tre prototipi. Questa prima versione del sito realizza <b>i primi due come esperimenti</b> e presenta il terzo e il quarto livello <b>come racconto</b>.</p>
+  <p class="tesi">La tesi prevede tre prototipi. Questa prima versione del sito realizza <b>i primi due come esperimenti</b> e presenta il terzo e il quarto livello <b>come racconto</b>, accompagnato da un <b>terzo prototipo di prova</b> con una simulazione illustrativa.</p>
   <div class="livelli">
     <a class="lv disp" href="testo/index.html"><span class="lv-n">1</span><b>Testo / disposizione</b><small>lessico e struttura</small></a>
     <div class="lv-freccia" aria-hidden="true">→</div>
@@ -209,7 +244,7 @@
     <div class="lv sim"><span class="lv-n">4</span><b>Scenari possibili</b><small>alternative regolative</small></div>
     <a class="pr p1" href="testo/index.html">Primo prototipo</a>
     <a class="pr p2" href="relazioni/index.html">Secondo prototipo</a>
-    <div class="pr p3 futuro">Terzo prototipo · fase successiva</div>
+    <a class="pr p3 futuro" href="fasi-successive/simulazione/index.html">Terzo prototipo · prova, da approvare</a>
   </div>
   <div class="schede-pr">
     <a class="spr disp" href="testo/index.html">
@@ -222,11 +257,11 @@
       <h3>Le relazioni</h3>
       <p>Nodi, archi e perimetro sono definiti; 20 relazioni candidate, con i testi tutti raccolti. La rete sarà disegnata dopo l'approvazione delle schede da parte del relatore.</p>
     </a>
-    <div class="spr eff">
-      <span class="statuto osservato">racconto</span>
-      <h3>Effetti e scenari</h3>
-      <p>Nella prima versione i livelli 3 e 4 sono descritti nel percorso qui sopra. Il prototipo dedicato è previsto in una fase successiva, dopo l'approvazione del relatore.</p>
-    </div>
+    <a class="spr eff" href="fasi-successive/simulazione/index.html">
+      <span class="statuto simulato">prova · da approvare</span>
+      <h3>La tutela applicata</h3>
+      <p>Nella prima versione i livelli 3 e 4 sono descritti nel percorso qui sopra. Il terzo prototipo è una pagina di prova: dati INPS disponibili, il dato mancante sul non accesso, e una simulazione con persone più o meno informate. È da approvare dal relatore.</p>
+    </a>
   </div>
   <p class="nota">Schema ripreso dai materiali del relatore ("Costruzione di osservabili giuridici") e dalla tesi, cap. III, § 2.1, e cap. IV, § 2. <b>Tutti i prototipi sono dimostrazioni di fattibilità</b>: mostrano che le procedure funzionano, non che producono conoscenza empirica validata.</p>
 </section>
