@@ -1,0 +1,115 @@
+/* Base comune a index e relazioni/. Il primo prototipo (testo/) ha un suo foglio di stile
+   e non dipende da questo file. Sfondo sempre chiaro; carattere Avenir (Nunito Sans dove manca).
+   Layout: colonna di lettura centrale, livelli distinti dai colori dello schema del relatore. */
+:root {
+  color-scheme: light;
+  --fondo: #ffffff;
+  --inchiostro: #111111;
+  --tenue: #646a6b;
+  --linea: #d3d4d0;
+  --neutro: #e7e7e3;
+  --accento: #2a6cb0;
+  --tinta: #edf1f3;
+  --liv-disp: #ccd8de;
+  --liv-corp: #cfdad3;
+  --liv-eff: #e5d9c6;
+  --liv-sim: #dfcbcd;
+  --fondo-disp: #f2f5f7;
+  --fondo-corp: #f2f5f3;
+  --fondo-eff: #f6f2ec;
+  --fondo-sim: #f5eff0;
+  --segno-disp: #4f7187;
+  --segno-corp: #278e5f;
+  --segno-eff: #9a6b1f;
+  --segno-sim: #9b4a5a;
+  --segnala: #9a5b00;
+  --segnala-tenue: #fbf0dc;
+  --sans: Avenir, "Avenir LT Std", "Avenir LT Pro", "Avenir Next", "Nunito Sans", "Segoe UI", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--fondo); color: var(--inchiostro);
+  font: 16px/1.6 var(--sans);
+  font-variant-numeric: tabular-nums;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.pagina { max-width: 1000px; margin: 0 auto; padding-block: 22px 64px; display: grid; gap: 40px; }
+h1, h2, h3 { margin: 0; line-height: 1.2; text-wrap: balance; }
+h1 { font-size: clamp(1.7rem, 4.2vw, 2.4rem); font-weight: 700; }
+h2 { font-size: 1.35rem; font-weight: 700; }
+h3 { font-size: 1.08rem; font-weight: 700; }
+p { margin: 0; max-width: 68ch; }
+a { color: var(--accento); }
+:focus-visible { outline: 2px solid var(--accento); outline-offset: 2px; }
+section { display: grid; gap: 14px; min-width: 0; }
+
+/* navigazione comune */
+.nav { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.88rem; border-bottom: 1px solid var(--linea); padding-bottom: 10px; }
+.nav a { color: var(--tenue); text-decoration: none; padding-bottom: 8px; margin-bottom: -11px; }
+.nav a[aria-current="page"] { color: var(--inchiostro); font-weight: 700; border-bottom: 3px solid var(--inchiostro); }
+.nav .n1[aria-current="page"] { border-color: var(--liv-disp); }
+.nav .n2[aria-current="page"] { border-color: var(--liv-corp); }
+.nav .n3[aria-current="page"] { border-color: var(--liv-eff); }
+
+.testata { display: grid; gap: 12px; }
+.etichetta { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--tenue); }
+.sottotitolo { color: var(--tenue); font-size: 1.05rem; }
+.nota { font-size: 0.84rem; color: var(--tenue); }
+.verifica { color: var(--segnala); font-weight: 600; }
+.stato { font-size: 0.86rem; background: var(--segnala-tenue); border-left: 3px solid var(--segnala); padding: 9px 12px; max-width: 68ch; }
+.stato strong { color: var(--segnala); }
+
+/* blocchi di statuto: che tipo di conoscenza produce una sezione */
+.statuto { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; width: fit-content; }
+.statuto.osservato { background: var(--liv-eff); color: #5b4318; }
+.statuto.simulato { background: var(--liv-sim); color: #6d2f3b; }
+.statuto.progetto { background: var(--liv-corp); color: #24513a; }
+.statuto.misurato { background: var(--liv-disp); color: #2f4a5b; }
+
+/* livelli e prototipi */
+.livelli { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: 8px 6px; align-items: stretch; }
+.lv { border-top: 4px solid var(--neutro); padding: 10px 6px; text-align: center; display: grid; gap: 2px; text-decoration: none; color: inherit; }
+.lv b { font-size: 0.95rem; } .lv small { color: var(--tenue); font-size: 0.8rem; }
+.lv-n { font-size: 1.5rem; font-weight: 700; color: var(--tenue); line-height: 1; }
+.lv.disp { border-color: var(--liv-disp); } .lv.corp { border-color: var(--liv-corp); }
+.lv.eff { border-color: var(--liv-eff); } .lv.sim { border-color: var(--liv-sim); }
+.lv-freccia { align-self: center; color: var(--tenue); }
+.pr { font-size: 0.84rem; font-weight: 700; text-align: center; padding: 9px 6px; border-radius: 4px; color: var(--inchiostro); text-decoration: none; display: block; }
+.pr.p1 { grid-column: 1; background: var(--fondo-disp); }
+.pr.p2 { grid-column: 3; background: var(--fondo-corp); }
+.pr.p3 { grid-column: 5 / 8; background: var(--fondo-eff); }
+.pr.attivo { background: var(--inchiostro); color: #fff; }
+a.pr:hover { outline: 2px solid var(--inchiostro); }
+@media (max-width: 640px) {
+  .livelli { grid-template-columns: 1fr 1fr; }
+  .lv-freccia { display: none; }
+  .lv.disp { order: 1; } .pr.p1 { order: 2; grid-column: auto; }
+  .lv.corp { order: 3; } .pr.p2 { order: 4; grid-column: auto; }
+  .lv.eff { order: 5; } .lv.sim { order: 6; } .pr.p3 { order: 7; grid-column: 1 / 3; }
+}
+
+.continuum { display: grid; gap: 6px; }
+.c-poli { display: flex; justify-content: space-between; font-size: 1.05rem; }
+.c-barra { position: relative; height: 10px; border-radius: 2px; background: linear-gradient(90deg, var(--liv-disp), var(--liv-corp), var(--liv-eff), var(--liv-sim)); }
+.c-qui { position: absolute; top: -4px; bottom: -4px; border: 2px solid var(--inchiostro); border-radius: 3px; }
+.c-criteri { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--tenue); flex-wrap: wrap; gap: 4px; }
+
+/* schede */
+details { border-top: 1px solid var(--linea); padding-block: 10px; }
+details:last-of-type { border-bottom: 1px solid var(--linea); }
+summary { cursor: pointer; font-weight: 700; }
+.scheda { display: grid; grid-template-columns: minmax(120px, 190px) 1fr; gap: 6px 16px; margin: 12px 0 0; font-size: 0.92rem; }
+.scheda dt { color: var(--tenue); }
+.scheda dd { margin: 0; min-width: 0; }
+@media (max-width: 560px) { .scheda { grid-template-columns: 1fr; } .scheda dd { margin-bottom: 8px; } }
+
+.tabella { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--linea); vertical-align: top; }
+thead th { font-weight: 700; color: var(--tenue); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em; }
+td.n, th.n { text-align: right; white-space: nowrap; }
+
+footer { border-top: 1px solid var(--linea); padding-top: 16px; font-size: 0.84rem; color: var(--tenue); display: grid; gap: 6px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+.pr.futuro { color: var(--tenue); font-weight: 600; border: 1px dashed var(--liv-eff); }

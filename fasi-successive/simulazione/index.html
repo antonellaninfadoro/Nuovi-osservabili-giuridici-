@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terzo prototipo · Effetti e scenari</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../../assets/base.css">
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+<div class="pagina">
+
+<header class="testata">
+  <nav class="nav" aria-label="Sezioni del sito">
+    <a href="../../index.html">Il framework</a>
+    <a class="n1" href="../../testo/index.html">Primo prototipo · La disposizione</a>
+    <a class="n2" href="../../relazioni/index.html">Secondo prototipo · Le relazioni</a>
+    <a class="n3" href="index.html" aria-current="page">Terzo prototipo · Effetti e scenari</a>
+  </nav>
+  <div class="stato"><strong>Fase successiva, fuori dalla versione 1.</strong> Pagina di prova, pubblicata nel repository ma non collegata al sito. Da sottoporre al relatore.</div>
+  <span class="etichetta">Terzo e quarto livello di indagine · Attuazione ed effetti · Simulazione controfattuale</span>
+  <h1>Terzo prototipo. Dalla tutela scritta alla tutela applicata: i permessi dell'art. 33</h1>
+  <p class="sottotitolo">Che cosa sappiamo di chi usa davvero i permessi, che cosa non sappiamo, e come si può esplorare ciò che non si osserva.</p>
+</header>
+
+<section class="apertura" aria-labelledby="t-posto">
+  <h2 id="t-posto">Il posto del prototipo nel framework</h2>
+  <div class="livelli" role="img" aria-label="Il terzo prototipo copre il terzo e il quarto livello">
+    <a class="lv disp" href="../../testo/index.html"><span class="lv-n">1</span><b>Testo / disposizione</b><small>lessico e struttura</small></a>
+    <div class="lv-freccia" aria-hidden="true">→</div>
+    <a class="lv corp" href="../../relazioni/index.html"><span class="lv-n">2</span><b>Corpus / sistema</b><small>relazioni tra fonti</small></a>
+    <div class="lv-freccia" aria-hidden="true">→</div>
+    <div class="lv eff"><span class="lv-n">3</span><b>Effetti reali</b><small>accesso e distribuzione</small></div>
+    <div class="lv-freccia" aria-hidden="true">→</div>
+    <div class="lv sim"><span class="lv-n">4</span><b>Scenari possibili</b><small>alternative regolative</small></div>
+    <a class="pr p1" href="../../testo/index.html">Primo prototipo</a>
+    <a class="pr p2" href="../../relazioni/index.html">Secondo prototipo</a>
+    <div class="pr p3 attivo">Terzo prototipo · questa pagina</div>
+  </div>
+  <p>Il primo prototipo ha mostrato che, per sapere se ha diritto ai tre giorni di permesso, una persona deve superare quattro passaggi e consultare altri atti. Questo prototipo chiede che cosa succede dopo: <b>quante persone arrivano davvero a usare la tutela, e che cosa la ferma?</b></p>
+  <p>Il prototipo tiene separate due forme di conoscenza, come chiede la tesi (cap. III, terza regola di lettura della griglia). Gli effetti <b>osservati</b> poggiano su dati ufficiali. Gli esiti <b>simulati</b> dipendono dalle ipotesi del modello: esplorano mondi possibili e non descrivono la realtà.</p>
+  <div class="stato"><strong>Prototipo v0.1, 4 novembre 2026.</strong> Dimostrazione di fattibilità. I dati della prima parte sono pochi e vanno ampliati; la simulazione della seconda parte è illustrativa e non è calibrata su dati reali.</div>
+</section>
+
+<!-- ============ LIVELLO 3 ============ -->
+<section class="parte eff" aria-labelledby="t-l3">
+  <span class="statuto osservato">Livello 3 · effetti osservati · dati ufficiali</span>
+  <h2 id="t-l3">Sappiamo quanti usano i permessi. Non sappiamo quanti ne avrebbero diritto.</h2>
+  <p>L'INPS conta i lavoratori dipendenti del settore privato che hanno usato i permessi per assistere un familiare. Il numero cresce di un terzo in quattro anni. Manca però il termine con cui confrontarlo: quante persone avevano i requisiti. Senza questo denominatore non si può misurare lo scarto fra tutela promessa e tutela fruita.</p>
+
+  <figure class="figura">
+    <figcaption><span class="etichetta">Figura 1 · Fruitori e aventi diritto</span>
+      <h3>Il numeratore c'è, il denominatore manca</h3></figcaption>
+    <div class="diagramma" id="fig-fruitori"></div>
+    <p class="nota">Fonte: INPS, Coordinamento generale statistico attuariale, <i>Osservatorio statistico. Prestazioni a sostegno della famiglia</i>, anni 2020-2024, dicembre 2025, Tavola 6.1, come citato nella tesi (cap. IV, § 1.2, nota 469). Variazione 2020-2024 calcolata da noi. Il riquadro tratteggiato non è un dato: indica ciò che manca.</p>
+  </figure>
+
+  <figure class="figura">
+    <figcaption><span class="etichetta">Figura 2 · La norma cambia mentre si misura</span>
+      <h3>Le modifiche all'art. 33 attorno ai dati</h3>
+      <p>Le due misure INPS cadono in anni in cui la disciplina cambia. Ogni variazione dei fruitori va letta tenendo conto di queste modifiche: è il secondo livello che entra nel terzo.</p></figcaption>
+    <div class="diagramma" id="fig-tempo"></div>
+    <p class="nota">Fonti: note di aggiornamento del testo vigente dell'art. 33 su Normattiva (sentenza 213/2016; d.l. 18/2020, art. 24, comma 1); tesi, cap. IV, § 1.2 (d.lgs. 105/2022; d.lgs. 62/2024 e rinvio al 2027).</p>
+  </figure>
+
+  <div class="due">
+    <div class="riquadro">
+      <h3>Come costruire l'osservabile mancante</h3>
+      <p>La domanda giusta non è "la legge 104 funziona?" ma: <b>chi, pur avendo i requisiti, non usa i permessi, dove e perché?</b> Servono tre dati per lo stesso anno e territorio:</p>
+      <ol>
+        <li>persone con gravità accertata ai sensi dell'art. 3, comma 3 (accertamenti dell'art. 4);</li>
+        <li>familiari lavoratori dipendenti che potrebbero assisterle (art. 33, comma 3);</li>
+        <li>lavoratori che hanno fruito dei permessi, per territorio, genere, settore.</li>
+      </ol>
+      <p class="nota">Stato: solo il terzo dato è disponibile, e solo in forma aggregata. <span class="verifica">Da verificare se l'Osservatorio INPS offre la distribuzione per territorio.</span></p>
+    </div>
+    <div class="riquadro">
+      <h3>Un modello metodologico: la rinuncia alle cure</h3>
+      <p>La Porta e Zapperi misurano la quota di persone che rinunciano a visite mediche, distinguendo il 20% più povero dal 20% più ricco e le ragioni della rinuncia, come il costo o le liste d'attesa. È un osservabile semplice: il diritto esiste, e si misura chi non riesce a esercitarlo.</p>
+      <p>L'analogo per la 104 sarebbe il <b>non accesso ai permessi</b> pur avendo i requisiti, disaggregato per territorio e condizione.</p>
+      <p class="nota">C.A.M. La Porta, S. Zapperi, <i>Inequality and Health. A Quantitative Approach</i>, Peter Lang, 2026, § 4.1, pp. 38-40 (dati Eurostat, EU-SILC). Il volume è divulgativo: per la tesi conviene citare anche gli articoli scientifici degli autori.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVELLO 4 ============ -->
+<section class="parte sim" aria-labelledby="t-l4">
+  <span class="statuto simulato">Livello 4 · esiti simulati · ipotesi esplicite</span>
+  <h2 id="t-l4">Se non possiamo osservare lo scarto, possiamo esplorare da che cosa dipende</h2>
+  <p>La simulazione costruisce una popolazione <b>ipotetica</b> di 1.000 persone che hanno tutte i requisiti per i permessi. Ognuna deve attraversare i passaggi ricostruiti nel primo prototipo: conoscere il diritto, ottenere l'accertamento della gravità, presentare la domanda, fruire dei permessi. Chi conosce il diritto può informare i propri contatti. Metà della popolazione vive in un territorio A, metà in un territorio B, che differiscono solo per i tempi di accertamento.</p>
+  <p class="avviso"><b>Nessun numero di questa sezione descrive la realtà.</b> I parametri sono ipotesi scelte per rendere leggibile l'esperimento. Servono a capire quali meccanismi pesano di più e quali dati andrebbero raccolti.</p>
+
+  <div class="laboratorio">
+    <div class="comandi">
+      <div class="scenari" role="group" aria-label="Scenari regolativi ipotetici">
+        <span class="etichetta">Scenari</span>
+        <button type="button" data-scenario="base" aria-pressed="true">Ipotesi di base</button>
+        <button type="button" data-scenario="informazione" aria-pressed="false">Informazione d'ufficio</button>
+        <button type="button" data-scenario="tempi" aria-pressed="false">Accertamento rapido anche in B</button>
+        <button type="button" data-scenario="garanzia" aria-pressed="false">Meno ostacoli dal datore</button>
+      </div>
+      <div class="parametri" id="parametri"></div>
+      <button type="button" class="secondario" id="b-ripristina">Ripristina l'ipotesi di base</button>
+    </div>
+
+    <div class="esiti">
+      <div class="cifra"><strong id="r-quota">–</strong><span id="r-testo"></span></div>
+      <figure class="figura stretta">
+        <figcaption><span class="etichetta">Figura 3 · Mille persone con i requisiti, dopo 12 mesi</span></figcaption>
+        <div class="griglie" id="fig-agenti"></div>
+        <div class="leg-fasi" id="leg-fasi"></div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="due">
+    <figure class="figura">
+      <figcaption><span class="etichetta">Figura 4 · Dove si fermano</span><h3>Il percorso, passaggio per passaggio</h3></figcaption>
+      <div class="diagramma" id="fig-imbuto"></div>
+    </figure>
+    <figure class="figura">
+      <figcaption><span class="etichetta">Figura 5 · Nel tempo</span><h3>Quota che fruisce, mese per mese</h3></figcaption>
+      <div class="diagramma" id="fig-mesi"></div>
+    </figure>
+  </div>
+
+  <figure class="figura">
+    <figcaption><span class="etichetta">Figura 6 · Analisi di sensibilità</span>
+      <h3>Quanto cambia l'esito se cambia un'ipotesi</h3>
+      <p>Si fa variare un parametro e si lasciano fermi gli altri. Una curva ripida indica un meccanismo su cui vale la pena raccogliere dati reali.</p></figcaption>
+    <div class="scelta-sens" role="group" aria-label="Parametro da far variare" id="scelta-sens"></div>
+    <div class="diagramma" id="fig-sens"></div>
+  </figure>
+</section>
+
+<section aria-labelledby="t-schede">
+  <h2 id="t-schede">Schede metodologiche</h2>
+  <details>
+    <summary>O1 · Fruitori dei permessi (figura 1) <span class="statuto osservato">osservato</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>Quante persone usano i permessi dell'art. 33, comma 3?</dd>
+      <dt>Unità</dt><dd>Lavoratore dipendente del settore privato che ha fruito dei permessi per assistere un familiare, nell'anno.</dd>
+      <dt>Fonte</dt><dd>[F] INPS, Osservatorio statistico. Prestazioni a sostegno della famiglia, anni 2020-2024, dicembre 2025, Tavola 6.1 (tesi, nota 469): 445.167 nel 2020, 608.206 nel 2024.</dd>
+      <dt>Limiti</dt><dd>Esclude il settore pubblico. Conta chi fruisce, non chi ne avrebbe diritto. Due soli anni.</dd>
+      <dt>Verifica</dt><dd><span class="verifica">Da controllare sulla Tavola 6.1 originale e da completare con gli anni 2021-2023.</span></dd>
+    </dl>
+  </details>
+  <details>
+    <summary>O2 · Modifiche della disciplina (figura 2) <span class="statuto osservato">osservato</span></summary>
+    <dl class="scheda">
+      <dt>Fonte</dt><dd>[F] Note di aggiornamento del testo vigente su Normattiva, salvate in testo/dati/l104-art33-vigente.txt (Corte cost. 213/2016; d.l. 18/2020, art. 24, c. 1). [F] Tesi, cap. IV, § 1.2 (d.lgs. 105/2022; d.lgs. 62/2024).</dd>
+      <dt>Limiti</dt><dd>Elenco parziale delle modifiche: la ricostruzione completa è il compito del secondo prototipo.</dd>
+    </dl>
+  </details>
+  <details>
+    <summary>S1 · Microsimulazione del percorso di accesso (figure 3-6) <span class="statuto simulato">simulato</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>Quali meccanismi possono generare uno scarto fra aventi diritto e fruitori, e quanto pesa ciascuno?</dd>
+      <dt>Statuto</dt><dd>[P] Proposta originale. Esperimento computazionale illustrativo, non calibrato né validato.</dd>
+      <dt>Fondamento</dt><dd>[F] Tesi, cap. III: la simulazione produce conseguenze che dipendono dalle ipotesi del modello e l'analisi di sensibilità verifica quanto cambiano al variare delle ipotesi (K.G. Troitzsch, <i>Legislation, Regulatory Impact Assessment and Simulation</i>, pp. 58 e 73-74, come citato nella tesi, nota 420). [F] Passaggi del percorso: figura 5 del primo prototipo (art. 33, commi 3, 5, 6-bis; art. 4).</dd>
+      <dt>Modello</dt><dd>1.000 agenti, 12 mesi, rete casuale di contatti. Ogni mese: chi non conosce il diritto può apprenderlo dai contatti informati; chi lo conosce attende l'accertamento (durata casuale con media diversa nei territori A e B); poi presenta la domanda con una certa probabilità; poi fruisce, salvo ostacolo del datore. Seme fisso: stessi parametri, stesso risultato.</dd>
+      <dt>Ipotesi</dt><dd>Tutti i valori di base sono ipotetici: 40% informato all'inizio, 4 contatti, 5% di probabilità mensile di passaparola per contatto informato, accertamento in 4 mesi in A e 9 in B, 80% presenta la domanda, 10% incontra ostacoli.</dd>
+      <dt>Limiti</dt><dd>I territori A e B non sono regioni reali. Il modello ignora reddito, genere, tipo di lavoro, rinunce volontarie. Gli scenari non sono proposte di riforma.</dd>
+      <dt>Verifica</dt><dd>8 test: riproducibilità, conservazione degli agenti, casi limite (nessun ostacolo: fruiscono tutti; nessuna informazione: nessuno), monotonia rispetto all'informazione.</dd>
+    </dl>
+  </details>
+</section>
+
+<footer>
+  <p>Il prototipo distingue ciò che si osserva da ciò che si simula. La simulazione non sostituisce l'osservazione: la estende verso i possibili.</p>
+  <p>Codice: modello.js (simulazione), vista.js (pagina). Test: test-modello.js. Schede complete: SCHEDE-C.md nel repository.</p>
+</footer>
+</div>
+<script src="modello.js"></script>
+<script src="vista.js"></script>
+</body>
+</html>

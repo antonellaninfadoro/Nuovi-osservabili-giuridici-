@@ -1,0 +1,57 @@
+/* Racconto a scorrimento della pagina iniziale: scena fissa a sinistra, passi a destra. */
+.percorso { display: grid; grid-template-columns: minmax(260px, 0.9fr) 1.1fr; gap: 36px; align-items: start; }
+.scena { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 20px); }
+.scena svg { width: 100%; height: auto; display: block; }
+.passi { display: grid; gap: 0; }
+.passo { min-height: 72vh; display: grid; gap: 12px; align-content: center; padding-block: 24px; border-top: 1px solid var(--linea); }
+.passo:first-child { border-top: 0; min-height: 60vh; align-content: start; }
+.passo:last-child { min-height: 60vh; }
+.passo h2 { font-size: 1.5rem; }
+.dato { background: var(--tinta); border-radius: 4px; padding: 10px 12px; }
+.vai { font-weight: 700; text-decoration: none; width: fit-content; }
+.vai:hover { text-decoration: underline; }
+.etichetta.l1 { color: var(--segno-disp); } .etichetta.l2 { color: var(--segno-corp); }
+.etichetta.l3 { color: var(--segno-eff); } .etichetta.l4 { color: var(--segno-sim); }
+
+/* scena */
+.fondo.f-disp { fill: var(--fondo-disp); stroke: var(--liv-disp); stroke-width: 2; }
+.fondo.f-corp { fill: var(--fondo-corp); stroke: var(--liv-corp); stroke-width: 2; }
+.fondo.f-eff { fill: var(--fondo-eff); stroke: var(--liv-eff); stroke-width: 2; }
+.fondo.f-sim { fill: var(--fondo-sim); stroke: var(--liv-sim); stroke-width: 2; }
+.tratto { stroke: var(--segno-disp); stroke-width: 4; stroke-linecap: round; }
+.tratto.lieve { stroke: var(--liv-disp); }
+.liv[data-liv="3"] .tratto { stroke: var(--tenue); stroke-width: 2; }
+.rete line { stroke: var(--segno-corp); stroke-width: 2; }
+.rete circle { fill: var(--liv-corp); stroke: var(--segno-corp); stroke-width: 2; }
+.barre rect { fill: var(--segno-eff); }
+.rami path { fill: none; stroke: var(--segno-sim); stroke-width: 3; }
+.rami circle { fill: var(--liv-sim); stroke: var(--segno-sim); stroke-width: 2; }
+.num { font: 700 22px var(--sans); fill: var(--tenue); text-anchor: end; }
+.freccia { fill: none; stroke: var(--tenue); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.liv { transition: opacity 0.4s ease; }
+
+/* stati (solo con JavaScript: senza, tutto resta acceso) */
+.con-scena #scena .liv { opacity: 0.22; }
+.con-scena #scena[data-passo="0"] .liv { opacity: 0.55; }
+.con-scena #scena[data-passo="1"] .liv[data-liv="1"],
+.con-scena #scena[data-passo="2"] .liv[data-liv="1"], .con-scena #scena[data-passo="2"] .liv[data-liv="2"],
+.con-scena #scena[data-passo="3"] .liv:not([data-liv="4"]),
+.con-scena #scena[data-passo="4"] .liv, .con-scena #scena[data-passo="5"] .liv { opacity: 1; }
+.con-scena .passo { opacity: 0.62; transition: opacity 0.3s ease; }
+.con-scena .passo.attivo { opacity: 1; }
+
+/* schede dei tre prototipi */
+.schede-pr { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.spr { display: grid; gap: 8px; align-content: start; padding: 16px; border-radius: 6px; text-decoration: none; color: inherit; border-top: 4px solid; }
+.spr.disp { background: var(--fondo-disp); border-color: var(--liv-disp); }
+.spr.corp { background: var(--fondo-corp); border-color: var(--liv-corp); }
+.spr.eff { background: var(--fondo-eff); border-color: var(--liv-eff); }
+.spr:hover h3 { text-decoration: underline; }
+.spr p { font-size: 0.93rem; }
+
+@media (max-width: 760px) {
+  .percorso { grid-template-columns: 1fr; gap: 0; }
+  .scena { top: env(safe-area-inset-top, 0px); background: var(--fondo); padding-block: 8px; z-index: 2; border-bottom: 1px solid var(--linea); }
+  .scena svg { max-width: 170px; margin: 0 auto; }
+  .passo { min-height: 62vh; }
+}

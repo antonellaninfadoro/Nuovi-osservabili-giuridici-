@@ -1,0 +1,69 @@
+/* Terzo prototipo: le due parti hanno lo sfondo del proprio livello. */
+:root {
+  --fase-0: #e7e7e3;
+  --fase-1: #ead9bd;
+  --fase-2: #d4b07a;
+  --fase-3: #a87b3c;
+  --fase-4: #3d2a0e;
+}
+.apertura { display: grid; gap: 14px; }
+.parte { padding: 22px 18px; border-radius: 6px; gap: 18px; }
+.parte.eff { background: var(--fondo-eff); }
+.parte.sim { background: var(--fondo-sim); }
+.figura { margin: 0; display: grid; gap: 10px; background: #fff; border-radius: 6px; padding: 16px; min-width: 0; }
+.figura.stretta { padding: 12px; }
+.figura figcaption { display: grid; gap: 6px; }
+.diagramma { overflow-x: auto; }
+.diagramma svg { width: 100%; height: auto; display: block; }
+.due { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.riquadro { background: #fff; border-radius: 6px; padding: 16px; display: grid; gap: 10px; align-content: start; }
+.riquadro ol { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+.avviso { background: #fff; border-left: 4px solid var(--segno-sim); padding: 10px 12px; }
+
+/* grafici */
+.ax { stroke: var(--linea); stroke-width: 1; }
+.lbl { font: 600 12px var(--sans); fill: var(--tenue); }
+.val { font: 700 15px var(--sans); fill: var(--inchiostro); }
+.barra-oss { fill: var(--segno-eff); }
+.barra-manca { fill: none; stroke: var(--segno-eff); stroke-width: 2; stroke-dasharray: 6 5; }
+.manca-txt { font: 700 13px var(--sans); fill: var(--segno-eff); }
+.ev-linea { stroke: var(--segno-eff); stroke-width: 2; }
+.ev-punto { fill: #fff; stroke: var(--segno-eff); stroke-width: 2; }
+.ev-dato { fill: var(--segno-eff); }
+.ev-anno { font: 700 12px var(--sans); fill: var(--inchiostro); }
+.ev-txt { font: 500 12px var(--sans); fill: var(--tenue); }
+
+/* laboratorio */
+.laboratorio { display: grid; grid-template-columns: minmax(260px, 340px) 1fr; gap: 16px; align-items: start; }
+@media (max-width: 760px) { .laboratorio { grid-template-columns: 1fr; } }
+.comandi { background: #fff; border-radius: 6px; padding: 14px; display: grid; gap: 14px; }
+.scenari, .scelta-sens { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.scenari .etichetta { width: 100%; }
+button { font: 600 0.86rem var(--sans); border-radius: 4px; padding: 7px 11px; cursor: pointer; border: 1px solid var(--linea); background: #fff; color: var(--inchiostro); }
+button[aria-pressed="true"] { background: var(--inchiostro); color: #fff; border-color: var(--inchiostro); }
+button.secondario { color: var(--accento); border-color: var(--accento); justify-self: start; }
+.parametri { display: grid; gap: 12px; }
+.param { display: grid; gap: 3px; }
+.param label { display: flex; justify-content: space-between; gap: 8px; font-size: 0.86rem; }
+.param label b { font-weight: 700; }
+.param input[type=range] { width: 100%; accent-color: var(--segno-sim); }
+.param small { color: var(--tenue); font-size: 0.76rem; }
+.esiti { display: grid; gap: 12px; min-width: 0; }
+.cifra { background: #fff; border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; }
+.cifra strong { font-size: 2.4rem; line-height: 1; }
+.cifra span { color: var(--tenue); font-size: 0.92rem; }
+.griglie { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.griglia h4 { margin: 0 0 6px; font-size: 0.86rem; }
+.griglia svg { width: 100%; height: auto; display: block; }
+.leg-fasi { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.8rem; color: var(--tenue); }
+.sw { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.f0 { fill: var(--fase-0); background: var(--fase-0); } .f1 { fill: var(--fase-1); background: var(--fase-1); }
+.f2 { fill: var(--fase-2); background: var(--fase-2); } .f3 { fill: var(--fase-3); background: var(--fase-3); }
+.f4 { fill: var(--fase-4); background: var(--fase-4); }
+.linea-base { fill: none; stroke: var(--tenue); stroke-width: 2; stroke-dasharray: 5 4; }
+.linea-scen { fill: none; stroke: var(--segno-sim); stroke-width: 2.5; }
+.linea-sens { fill: none; stroke: var(--segno-sim); stroke-width: 2.5; }
+.punto-sens { fill: var(--segno-sim); }
+.punto-qui { fill: #fff; stroke: var(--inchiostro); stroke-width: 2; }
+.imb-barra { fill: var(--segno-sim); }
+.imb-perdita { fill: var(--liv-sim); }

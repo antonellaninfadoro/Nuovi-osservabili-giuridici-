@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Primo prototipo · La disposizione</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="stile.css">
+</head>
+<body>
+<div class="pagina">
+
+<header class="testata">
+  <nav class="nav" aria-label="Sezioni del sito">
+    <a href="../index.html">Il framework</a>
+    <a href="index.html" aria-current="page">Primo prototipo · La disposizione</a>
+    <a href="../relazioni/index.html">Secondo prototipo · Le relazioni</a>
+  </nav>
+  <span class="etichetta">Primo livello di indagine · Disposizioni e atti · Descrizione e misurazione</span>
+  <h1>Primo prototipo. Osservabili testuali di una disposizione: l'art. 33 della legge 104/1992</h1>
+  <p class="sottotitolo">Che cosa si può osservare nel testo dell'articolo sui permessi lavorativi: struttura, leggibilità, rinvii, terminologia e requisiti di accesso. Testo vigente da Normattiva.</p>
+</header>
+
+<section class="apertura" aria-labelledby="t-framework">
+  <h2 id="t-framework">Un prototipo dentro un framework</h2>
+  <p>Questo prototipo fa parte del <b>framework per la costruzione computazionale degli osservabili giuridici</b> proposto nella tesi. Il framework non è un metodo unico: mette in relazione un oggetto giuridico, una domanda conoscitiva, un'operazione che trasforma l'oggetto in dati e una tecnica che rende visibile una proprietà di quei dati.</p>
+  <p>Il modello teorico distingue quattro livelli di indagine, dalla singola disposizione agli scenari possibili. Tre prototipi li rendono operativi sulla legge 104/1992, con un caso comune: i permessi lavorativi dell'art. 33. Ogni livello incorpora i precedenti. Per costruire la rete dei rinvii bisogna prima riconoscerli nel testo, e per misurare l'accesso a una tutela bisogna conoscere le norme che la prevedono.</p>
+
+  <div class="livelli" role="img" aria-label="Tre prototipi per quattro livelli di indagine; questo è il primo">
+    <div class="lv disp"><span class="lv-n">1</span><b>Testo / disposizione</b><small>lessico e struttura</small></div>
+    <div class="lv-freccia" aria-hidden="true">→</div>
+    <div class="lv corp"><span class="lv-n">2</span><b>Corpus / sistema</b><small>relazioni tra fonti</small></div>
+    <div class="lv-freccia" aria-hidden="true">→</div>
+    <div class="lv eff"><span class="lv-n">3</span><b>Effetti reali</b><small>accesso e distribuzione</small></div>
+    <div class="lv-freccia" aria-hidden="true">→</div>
+    <div class="lv sim"><span class="lv-n">4</span><b>Scenari possibili</b><small>alternative regolative</small></div>
+
+    <div class="pr p1 attivo">Primo prototipo · questa pagina</div>
+    <a class="pr p2" href="../relazioni/index.html">Secondo prototipo · rete delle norme collegate</a>
+    <div class="pr p3">Terzo prototipo · dalla tutela scritta alla tutela applicata (fase successiva)</div>
+  </div>
+
+  <div class="continuum">
+    <div class="c-poli"><b>Bellezza</b><b>Giustizia</b></div>
+    <div class="c-barra"><span class="c-qui" style="left:0;width:26%"></span></div>
+    <div class="c-criteri"><span>Comprensibilità</span><span>Coerenza</span><span>Accessibilità</span><span>Equità</span></div>
+  </div>
+  <p>Il primo prototipo lavora vicino al polo della comprensibilità. Risponde a una domanda circoscritta: <b>che cosa rende osservabile il testo dell'art. 33, con quali strumenti e con quali limiti?</b> I risultati descrivono il testo e segnalano punti da rileggere. Il giudizio di giustizia richiede dati sugli effetti e un criterio normativo esplicito: è il compito del terzo prototipo, previsto in una fase successiva.</p>
+  <div class="stato"><strong>Prototipo v0.3, 3 novembre 2026.</strong> Dimostrazione di fattibilità: mostra che le procedure funzionano sul testo reale. Le schede attendono l'approvazione del relatore; i risultati sono controllati a mano su un piccolo campione e non sono validati.</div>
+  <p class="nota">Schema ripreso dai materiali del relatore ("Costruzione di osservabili giuridici", schema d'insieme e mappa multidimensionale) e dalla tesi, cap. III, § 2.1, e cap. IV, § 2.</p>
+</section>
+
+<section aria-labelledby="t-copertura">
+  <h2 id="t-copertura">Che cosa osserva il prototipo</h2>
+  <p>La griglia della tesi (cap. III) elenca gli osservabili del primo livello. La tabella dice, per ciascuno, che cosa il prototipo misura davvero.</p>
+  <div class="tabella">
+  <table class="copertura">
+    <thead><tr><th>Osservabile (griglia, cap. III)</th><th>Stato</th><th>Come, nel prototipo</th></tr></thead>
+    <tbody>
+      <tr><th>Leggibilità</th><td><span class="st si">misurato</span></td><td>Indice Gulpease per comma e per articolo (A3, figura 1)</td></tr>
+      <tr><th>Complessità sintattica</th><td><span class="st parz">in parte</span></td><td>Lunghezza dei periodi (A2). Subordinate e costrutti richiedono un parser: non misurati</td></tr>
+      <tr><th>Complessità lessicale</th><td><span class="st no">non misurato</span></td><td>Servirebbe il Nuovo vocabolario di base o un modello come READ-IT (Brunato e Venturi 2014), non disponibili nel prototipo</td></tr>
+      <tr><th>Chiarezza</th><td><span class="st parz">in parte</span></td><td>Solo attraverso indicatori indiretti: leggibilità, terminologia, rinvii</td></tr>
+      <tr><th>Ambiguità</th><td><span class="st parz">in parte</span></td><td>Solo il segnale formale "e/o" (R1). L'ambiguità semantica richiede interpretazione</td></tr>
+      <tr><th>Struttura e partizioni</th><td><span class="st si">misurato</span></td><td>Rubrica, commi, lettere, commi aggiunti e abrogati (A1)</td></tr>
+      <tr><th>Terminologia</th><td><span class="st si">misurato</span></td><td>Designazioni diverse dello stesso concetto (T1, figura 4) e formule ricorrenti (F1)</td></tr>
+      <tr><th>Rinvii interni</th><td><span class="st si">misurato</span></td><td>Rinvii fra commi e ad altri articoli (A4, D1, figura 2); rinvii esterni come ponte al secondo prototipo (D2, figura 3)</td></tr>
+      <tr><th>Regolarità formale</th><td><span class="st si">misurato</span></td><td>Sette controlli tratti dalle Regole e raccomandazioni del 2001 (R1) e rinvio a comma abrogato (A6)</td></tr>
+      <tr><th>Marcatura XML</th><td><span class="st no">non fatto</span></td><td>Il riconoscimento di commi e rinvii è il primo passo; la marcatura secondo lo standard Normeinrete resta fuori dalla v1</td></tr>
+      <tr><th>Confronto fra atti e versioni</th><td><span class="st parz">in parte</span></td><td>Confronto fra articoli della stessa legge (tabella in fondo ai risultati). Confronto fra versioni: servono i testi storici</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="risultati" hidden aria-labelledby="t-ris">
+  <h2 id="t-ris">Che cosa mostra l'art. 33</h2>
+  <p class="nota" id="r-fonte"></p>
+  <ol class="reperti" id="reperti"></ol>
+
+  <figure class="figura" id="fig-1">
+    <figcaption><span class="etichetta">Figura 1 · Leggibilità</span><h3>Periodi lunghi, leggibilità media: dove si colloca il testo</h3></figcaption>
+    <div class="pannelli" id="grafici"></div>
+  </figure>
+
+  <figure class="figura" id="fig-2">
+    <figcaption><span class="etichetta">Figura 2 · Rinvii fra i commi</span><h3 id="t-fig2">Il comma 3 regge l'articolo</h3>
+    <p>Ogni arco è un rinvio esplicito da un comma a un altro: la freccia punta al comma richiamato. Sotto ogni comma, il numero di parole (anche la grandezza del cerchio) e, in blu, quanti commi vi rinviano.</p></figcaption>
+    <div class="diagramma" id="fig-commi"></div>
+    <div class="g-legenda in-riga" id="leg-commi"></div>
+  </figure>
+
+  <figure class="figura" id="fig-3">
+    <figcaption><span class="etichetta">Figura 3 · Atti da consultare</span><h3 id="t-fig3">Per leggere l'articolo per intero servono altri atti</h3>
+    <p>A sinistra i commi che rinviano fuori dall'articolo, a destra gli atti citati. Lo spessore della linea conta i rinvii; il totale è scritto sotto ogni atto.</p></figcaption>
+    <div class="diagramma" id="fig-atti"></div>
+    <div class="g-legenda in-riga" id="leg-atti"></div>
+  </figure>
+
+  <figure class="figura" id="fig-4">
+    <figcaption><span class="etichetta">Figura 4 · Terminologia</span><h3>Due strati di lessico nello stesso articolo</h3>
+    <p>Ogni riga è un comma in vigore; ogni colonna un modo di designare la condizione della persona assistita. Il quadratino a sinistra indica i commi che Normattiva racchiude tra (( )), cioè modificati nel tempo.</p></figcaption>
+    <div class="diagramma" id="fig-termini"></div>
+    <div class="g-legenda in-riga" id="leg-termini"></div>
+    <p class="nota">Le Regole e raccomandazioni del 2001 (par. 4, lett. a) chiedono che gli stessi concetti siano indicati con denominazioni identiche, anche per facilitare la ricerca elettronica. Che le tre forme indichino lo stesso concetto è un giudizio interpretativo da confermare. La tesi (cap. IV, § 1.2) ricorda che il d.lgs. 62/2024 sostituisce "handicap" con "condizione di disabilità".</p>
+  </figure>
+
+  <section class="figura" id="controlli" aria-labelledby="t-controlli">
+    <span class="etichetta">Controlli di tecnica legislativa · legimatica valutativa</span>
+    <h3 id="t-controlli">Il testo rispetto alle Regole e raccomandazioni del 2001</h3>
+    <p>Ogni controllo confronta il testo con una regola scritta e ne segnala gli scostamenti, come fanno i sistemi della legimatica valutativa. Applicare regole del 2001 a commi scritti nel 1992 è un confronto retrospettivo.</p>
+    <ul class="controlli" id="controlli-lista"></ul>
+  </section>
+
+  <figure class="figura" id="fig-5">
+    <figcaption><span class="etichetta">Figura 5 · Requisiti di accesso · ricostruzione manuale · ponte verso il terzo livello</span><h3>Chi ha diritto ai tre giorni di permesso</h3>
+    <p>Lo schema scompone il comma 3 nei passaggi che una persona deve verificare per sapere se ha diritto ai permessi. Ogni casella riporta le parole del testo e il comma da cui vengono. È una ricostruzione manuale: un giudizio interpretativo da sottoporre al relatore, non un risultato del codice.</p></figcaption>
+    <div class="requisiti">
+      <div class="rq-passo">
+        <span class="rq-n">1 · Chi chiede</span>
+        <p>"lavoratore dipendente, pubblico o privato"</p><small>c. 3</small>
+      </div>
+      <div class="rq-freccia" aria-hidden="true">→</div>
+      <div class="rq-passo">
+        <span class="rq-n">2 · Per assistere chi</span>
+        <p>"persona con disabilità in situazione di gravità"</p>
+        <p>"che non sia ricoverata a tempo pieno"</p><small>c. 3</small>
+      </div>
+      <div class="rq-freccia" aria-hidden="true">→</div>
+      <div class="rq-passo">
+        <span class="rq-n">3 · Con quale legame (uno dei quattro)</span>
+        <ul>
+          <li>coniuge</li>
+          <li>parte di un'unione civile <em class="rq-rinvio">definita da l. 76/2016, art. 1, c. 20</em></li>
+          <li>convivente di fatto <em class="rq-rinvio">definito da l. 76/2016, art. 1, c. 36</em></li>
+          <li>parente o affine entro il secondo grado</li>
+        </ul>
+        <div class="rq-estensione"><b>Si estende al terzo grado</b> se genitori o coniuge (o parte dell'unione civile, o convivente) mancano, sono deceduti, hanno patologie invalidanti o hanno compiuto 65 anni. <small>c. 3, 2° periodo</small></div>
+      </div>
+      <div class="rq-freccia" aria-hidden="true">→</div>
+      <div class="rq-passo esito">
+        <span class="rq-n">4 · Che cosa ottiene</span>
+        <p>"tre giorni di permesso mensile retribuito coperto da contribuzione figurativa"</p><small>c. 3</small>
+        <p>sede di lavoro più vicina, nessun trasferimento senza consenso</p><small>c. 5</small>
+        <p>priorità nell'accesso al lavoro agile</p><small>c. 6-bis</small>
+      </div>
+    </div>
+    <div class="rq-sotto">
+      <div><span class="rq-n">Limiti</span><p>Tre giorni complessivi per la stessa persona assistita, anche divisi fra più familiari (c. 3, 3° periodo). Assistenza a più persone solo per alcuni legami (c. 3, 4° periodo).</p></div>
+      <div><span class="rq-n">Oneri e controlli</span><p>Oltre 150 km di distanza: prova del viaggio (c. 3-bis). Decadenza se mancano le condizioni (c. 7-bis).</p></div>
+      <div><span class="rq-n">Garanzia verso il datore</span><p>Rifiuto od ostacolo impediscono la certificazione della parità di genere (c. 7-ter).</p></div>
+    </div>
+    <div class="rq-conti">
+      <span><b>4</b> passaggi da verificare in sequenza</span>
+      <span><b>4</b> legami alternativi, più un'estensione con <b>4</b> condizioni</span>
+      <span><b>2</b> definizioni da cercare in un'altra legge</span>
+    </div>
+    <p class="nota">Proposta originale [P]: tradurre la fattispecie in passaggi di verifica rende osservabile il "costo informativo" della tutela, cioè quante condizioni e quanti testi servono per sapere se si ha diritto. È il ponte verso il terzo livello: il non accesso a una tutela pur avendone i requisiti.</p>
+  </figure>
+
+  <section class="figura" id="sez-confronto" aria-labelledby="t-confronto">
+    <span class="etichetta">Confronto fra articoli</span>
+    <h3 id="t-confronto">L'art. 33 accanto agli articoli da cui dipende</h3>
+    <p>Gli stessi controlli, applicati ad altri articoli della legge, danno un termine di confronto interno. Sono stati scelti gli articoli da cui l'art. 33 dipende: l'art. 3, che definisce la situazione di gravità, e l'art. 4, che l'art. 33 richiama per l'accertamento. Il confronto fra versioni dello stesso articolo (1992 e oggi) resta il passo successivo.</p>
+    <div class="tabella" id="confronto"></div>
+  </section>
+
+  <div class="blocco">
+    <h3>Il testo commentato</h3>
+    <div class="lenti" role="group" aria-label="Che cosa evidenziare nel testo">
+      <button type="button" data-lente="frasi" aria-pressed="true">Frasi</button>
+      <button type="button" data-lente="rinvii" aria-pressed="false">Rinvii</button>
+      <button type="button" data-lente="leggibilita" aria-pressed="false">Leggibilità per comma</button>
+    </div>
+    <div class="legenda" id="legenda"></div>
+    <div class="norma" id="norma"></div>
+  </div>
+
+  <div class="gruppi">
+    <div class="blocco">
+      <h3>Misure descrittive <span class="tipo descr">conteggi</span></h3>
+      <dl class="misure" id="m-descr"></dl>
+    </div>
+    <div class="blocco">
+      <h3>Segnalazioni <span class="tipo segn">da controllare</span></h3>
+      <dl class="misure" id="m-segn"></dl>
+      <p class="nota">Una segnalazione indica un punto da rileggere. Il giudizio sul suo significato giuridico spetta a chi legge.</p>
+    </div>
+  </div>
+
+  <div class="blocco">
+    <div class="azioni" style="justify-content: space-between">
+      <h3 id="t-tab">Dettaglio</h3>
+      <button type="button" class="secondario" id="b-copia">Copia i risultati (CSV)</button>
+    </div>
+    <div class="tabella" id="tabella"></div>
+    <p class="nota">Clicca una riga per trovare il brano nel testo. Il CSV serve a registrare il controllo manuale.</p>
+  </div>
+</section>
+
+<section aria-labelledby="t-fonte">
+  <h2 id="t-fonte">Il testo analizzato e la sua versione</h2>
+  <p>Il prototipo lavora sul testo vigente dell'art. 33, copiato da Normattiva. Si può incollare un altro articolo per ripetere l'analisi.</p>
+  <div class="blocco">
+    <div class="campi">
+      <label for="f-atto">Atto
+        <input id="f-atto" value="Legge 5 febbraio 1992, n. 104">
+      </label>
+      <label for="f-versione">Versione del testo
+        <select id="f-versione">
+          <option value="">Da indicare</option>
+          <option value="vigente">Testo vigente (consolidato)</option>
+          <option value="originario">Testo originario (1992)</option>
+        </select>
+      </label>
+      <label for="f-vigenza">Vigente al
+        <input id="f-vigenza" type="date">
+      </label>
+      <label for="f-consultazione">Consultato il
+        <input id="f-consultazione" type="date">
+      </label>
+    </div>
+    <label for="f-url">Indirizzo Normattiva della versione usata
+      <input id="f-url" placeholder="https://www.normattiva.it/...">
+    </label>
+    <label for="f-testo">Testo dell'articolo, copiato da Normattiva (intestazione "Art. N", rubrica e commi)
+      <textarea id="f-testo" spellcheck="false" placeholder="Art. 33&#10;&#10;(Agevolazioni).&#10;&#10;1. ..."></textarea>
+    </label>
+    <div class="azioni">
+      <button id="b-analizza" type="button">Analizza il testo</button>
+      <button id="b-carica" type="button" class="secondario">Carica l'art. 33 salvato</button>
+      <button id="b-svuota" type="button" class="secondario">Svuota</button>
+      <span class="nota" id="s-bozza"></span>
+    </div>
+    <ul class="avvisi" id="avvisi" hidden></ul>
+  </div>
+</section>
+
+<section class="vuoto" id="vuoto" aria-labelledby="t-vuoto">
+  <h2 id="t-vuoto">Come preparare il testo</h2>
+  <div class="blocco">
+    <ol>
+      <li>Apri la Legge 104/1992 su <a href="https://www.normattiva.it/eli/stato/LEGGE/1992/02/05/104/CONSOLIDATED/" target="_blank" rel="noopener">Normattiva</a> e scegli la versione: vigente a una data, oppure originaria.</li>
+      <li>Apri l'articolo da analizzare e copia il testo dalla riga "Art. N" fino all'ultimo comma. Le note "AGGIORNAMENTO" che seguono vengono escluse in automatico.</li>
+      <li>Registra versione, data di vigenza, data di consultazione e indirizzo della pagina. Senza questi dati il risultato non è riproducibile.</li>
+      <li>Premi "Analizza il testo". I segni (( )) con cui Normattiva marca le modifiche vengono tolti dal conteggio e contati a parte.</li>
+    </ol>
+    <p class="nota">Il testo salvato nel repository (dati/l104-art33-vigente.txt) è la versione vigente dell'art. 33 copiata da Normattiva il 3 novembre 2026. La data di vigenza è ancora da registrare.</p>
+  </div>
+</section>
+
+<section aria-labelledby="t-schede">
+  <h2 id="t-schede">Schede metodologiche</h2>
+  <p>Ogni controllo dichiara domanda, fonte, procedura e limiti. Le sigle distinguono la fonte documentata [F], l'adattamento [A] e la proposta originale [P]. In arancione ciò che resta da verificare.</p>
+  <p class="nota">Fonti ricorrenti: Presidenza del Consiglio dei ministri, Camera dei deputati, Senato della Repubblica, <i>Regole e raccomandazioni per la formulazione tecnica dei testi legislativi</i>, lettera circolare 20 aprile 2001, n. 1.1.26/10888/9.92 (citata come "Regole 2001"; paragrafi letti su una copia non istituzionale, <span class="verifica">da confrontare con il testo ufficiale</span>); E. Fameli, P. Mercatali, M. Ragona, D. Tiscornia, in G. Peruginelli, M. Ragona (a cura di), <i>L'informatica giuridica in Italia</i>, ESI, 2014, §§ 10-11 (citato come "Fameli et al. 2014"); P. Mercatali, "Legimatica: definizione, classificazione, àmbiti di applicazione", in S. Faro, N. Lettieri, A. Tartaglia Polcini (a cura di), <i>Diritto e tecnologie</i>, ESI, 2011, pp. 41-52.</p>
+  <div class="blocco">
+
+  <details>
+    <summary>A1 · Struttura: rubrica, commi, lettere <span class="tipo descr">descrittiva</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>Come è articolata la disposizione?</dd>
+      <dt>Unità di analisi</dt><dd>L'articolo; dentro l'articolo, il comma.</dd>
+      <dt>Fonte</dt><dd>[F] Regole 2001, par. 7, lett. b) (commi numerati) e par. 10, lett. b) (commi aggiunti con bis, ter). [F] Riconoscimento di articoli, commi e lettere con espressioni regolari: legimatica analitica (Mercatali 2011, pp. 46-47; Fameli et al. 2014, § 11.3.2).</dd>
+      <dt>Definizione operativa</dt><dd>[A] Comma = riga che inizia con un numero seguito da punto ("3-bis." compreso). Lettera = riga che inizia con "a)". Rubrica = riga dopo "Art. N", con o senza parentesi. Comma abrogato = testo che dichiara l'abrogazione. Comma modificato = comma racchiuso da Normattiva tra (( )).</dd>
+      <dt>Procedura</dt><dd>Funzione <code>struttura</code> in analisi.js.</dd>
+      <dt>Limiti</dt><dd>Dipende dall'impaginazione di Normattiva.</dd>
+      <dt>Verifica</dt><dd>Art. 33: rubrica, 11 commi, comma 1 abrogato, 5 commi modificati. Controllato a mano; test.</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>A2 · Periodi e loro lunghezza <span class="tipo descr">descrittiva</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>Quanto sono lunghi i periodi della disposizione?</dd>
+      <dt>Unità di analisi</dt><dd>Il periodo: "frase sintatticamente completa che termina con il punto".</dd>
+      <dt>Fonte</dt><dd>[F] Regole 2001, par. 7, lett. e) (definizione di periodo). [F] Fameli et al. 2014, § 10.4, p. 208 (un periodo per ogni punto fermo nel calcolo automatico).</dd>
+      <dt>Adattamento</dt><dd>[A] Il punto non chiude il periodo dopo abbreviazioni ("art.", "n.", "d.lgs.") o se seguito da minuscola o cifra. Il punto e virgola non lo chiude.</dd>
+      <dt>Limiti</dt><dd>Misura la lunghezza, non la complessità sintattica.</dd>
+      <dt>Verifica</dt><dd>Comma 3 dell'art. 33: 4 periodi, contati a mano; test.</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>A3 · Indice di leggibilità Gulpease <span class="tipo descr">descrittiva</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>Quanto è leggibile il testo secondo una formula costruita per l'italiano?</dd>
+      <dt>Unità di analisi</dt><dd>Il comma e l'articolo (commi abrogati esclusi).</dd>
+      <dt>Fonte</dt><dd>[F] P. Lucisano, M.E. Piemontese, "GULPEASE", <i>Scuola e città</i>, 1988, n. 3. Formula e soglie come nella tesi, cap. III, note 439-441: G = 89 + (300 × frasi − 10 × lettere) / parole. [F] Uso sui testi giuridici e limiti: D. Brunato, G. Venturi, <i>Informatica e diritto</i>, 2014, n. 1, pp. 116-117 e p. 127, nota 55. <span class="verifica">Pagine dell'articolo originale discordanti (110-124 nella tesi, 57-68 in Brunato e Venturi).</span></dd>
+      <dt>Adattamento</dt><dd>[A] Parola = sequenza di lettere o cifre; l'apostrofo separa; le cifre contano come lettere.</dd>
+      <dt>Limiti</dt><dd>Guarda solo la lunghezza di parole e frasi (tesi, cap. III, § 2.1, a). Fameli et al. 2014 (p. 210, nota 132) ne consigliano un uso relativo, per individuare le parti da rileggere. La leggibilità non coincide con la correttezza giuridica.</dd>
+      <dt>Verifica</dt><dd>Commi 5 (52,51) e 7 (58,17) ricalcolati a mano; test.</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>A4 · Rinvii espliciti <span class="tipo segn">segnalazione</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>A quali partizioni o atti rimanda la disposizione?</dd>
+      <dt>Fonte</dt><dd>[F] Riconoscimento automatico dei riferimenti normativi come esempio di legimatica analitica (tesi, cap. III, § 2.1, a; Mercatali 2011, pp. 46-47). [F] Nessi normativi espliciti: Fameli et al. 2014, § 11.3.3, p. 220.</dd>
+      <dt>Definizione operativa</dt><dd>[A] Esterno: atto con estremi o codice. Esterno anaforico: "della medesima legge", "del citato decreto". Interno: "presente legge, articolo, comma". Interno presunto: partizione senza atto.</dd>
+      <dt>Limiti</dt><dd>Riconoscimento superficiale: rinvii impliciti o abbreviati possono sfuggire.</dd>
+      <dt>Verifica</dt><dd>20 rinvii nell'art. 33, riletti uno per uno; test.</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>D1 · Rinvii fra i commi (figura 2) <span class="tipo descr">descrittiva</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>Su quali commi poggiano gli altri?</dd>
+      <dt>Unità di analisi</dt><dd>Il rinvio esplicito da un comma a un altro comma dello stesso articolo (arco orientato).</dd>
+      <dt>Fonte</dt><dd>[F] Fameli et al. 2014, § 11.3.3, p. 220. [A] Diagramma ad archi: scelta di rappresentazione.</dd>
+      <dt>Procedura</dt><dd>Dai rinvii A4 che citano commi senza nominare un altro articolo; "commi 1, 2, 3, 4 e 5" diventa cinque archi.</dd>
+      <dt>Limiti</dt><dd>Il numero di rinvii in entrata non misura l'importanza giuridica del comma.</dd>
+      <dt>Verifica</dt><dd>14 archi; comma 3 citato da 7 commi. Controllato a mano; test.</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>D2 · Atti esterni (figura 3) <span class="tipo descr">descrittiva</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>Quali altri testi servono per leggere l'articolo per intero?</dd>
+      <dt>Fonte</dt><dd>[F] Fameli et al. 2014, § 11.3.3, p. 220 (legimatica intratestuale: i nessi che collegano il testo all'ordinamento).</dd>
+      <dt>Adattamento</dt><dd>[A] "Della medesima legge" attribuito all'atto citato subito prima nello stesso comma.</dd>
+      <dt>Limiti</dt><dd>Non verifica contenuto e vigenza degli atti citati: è il compito del secondo prototipo.</dd>
+      <dt>Verifica</dt><dd>4 atti esterni e 1 rinvio all'art. 4 della stessa legge; test.</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>A6 · Rinvio a un comma abrogato <span class="tipo segn">segnalazione</span></summary>
+    <dl class="scheda">
+      <dt>Fonte</dt><dd>[F] Regola della legimatica valutativa: un atto abrogato non può essere citato in una disposizione successiva dello stesso testo (Mercatali 2011, pp. 47-48; Fameli et al. 2014, § 11.3.2, p. 218; tesi, cap. III, § 2.1, a).</dd>
+      <dt>Adattamento</dt><dd>[A] Applicata ai commi: arco D1 verso un comma abrogato.</dd>
+      <dt>Risultato</dt><dd>Il comma 7 dell'art. 33 richiama i "commi 1, 2, 3, 4 e 5"; il comma 1 risulta abrogato dal d.lgs. 151/2001.</dd>
+      <dt>Limiti</dt><dd>Non stabilisce se si tratti di un errore.</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>T1 · Terminologia (figura 4) <span class="tipo segn">segnalazione</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>Lo stesso concetto è indicato sempre con la stessa espressione?</dd>
+      <dt>Unità di analisi</dt><dd>L'espressione che designa la condizione della persona assistita.</dd>
+      <dt>Fonte</dt><dd>[F] Regole 2001, par. 4, lett. a): i medesimi concetti e istituti sono indicati con denominazioni identiche, senza sinonimi. [F] Tesi, cap. IV, § 1.2: il d.lgs. 62/2024 sostituisce "handicap" con "condizione di disabilità".</dd>
+      <dt>Definizione operativa</dt><dd>[A] Dizionario costruito a mano delle forme presenti nella l. 104/1992: "con disabilità in situazione di gravità", "handicappata in situazione di gravità", "in situazione di handicap grave", "portatore di handicap". Il raggruppamento come "stesso concetto" è un giudizio interpretativo.</dd>
+      <dt>Procedura</dt><dd>Funzione <code>terminologia</code>; incrocio con i commi racchiusi tra (( )) da Normattiva.</dd>
+      <dt>Limiti</dt><dd>Il dizionario va esteso a mano per altri articoli. Le (( )) segnalano una modifica senza dirne la data.</dd>
+      <dt>Verifica</dt><dd>Art. 33: 6 + 1 + 2 occorrenze, controllate a mano; test.</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>R1 · Controlli di tecnica legislativa <span class="tipo segn">controllo</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>Il testo rispetta alcune regole formali verificabili in modo automatico?</dd>
+      <dt>Fonte</dt><dd>[F] Regole 2001: par. 7, lett. b) commi numerati; par. 10, lett. b) commi aggiunti; par. 5, lett. b) rubriche; par. 11, lett. d) niente "precedente" e "successivo"; par. 4, lett. f) niente "e/o"; par. 12, lett. i) niente "e seguenti"; par. 4, lett. a) denominazioni identiche. [F] Legimatica valutativa: confronto fra testo e modelli corretti, con segnalazione degli scostamenti (Fameli et al. 2014, § 11.3.2, p. 218).</dd>
+      <dt>Limiti</dt><dd>Sono controlli di forma. Il testo del 1992 precede le regole del 2001: per i commi originari il confronto è retrospettivo. L'uniformità delle rubriche va verificata su tutta la legge.</dd>
+      <dt>Verifica</dt><dd>Esiti sull'art. 33 controllati a mano; regole 10b e 4f provate su stringhe di prova; test.</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>F1 · Formule ricorrenti <span class="tipo descr">descrittiva</span></summary>
+    <dl class="scheda">
+      <dt>Domanda</dt><dd>Quali sequenze di parole si ripetono nel testo?</dd>
+      <dt>Fonte</dt><dd>[F] Tesi, cap. III, § 2.1, a): al primo livello gli strumenti "riconoscono partizioni, rinvii e formule ricorrenti".</dd>
+      <dt>Definizione operativa</dt><dd>[A] Sequenze di tre parole ripetute almeno tre volte, che non iniziano né finiscono con una parola grammaticale.</dd>
+      <dt>Limiti</dt><dd>Indicatore esplorativo: segnala dove guardare, non spiega perché una formula ricorre.</dd>
+      <dt>Verifica</dt><dd>Art. 33: "situazione di gravità" 8 volte (commi 2, 3, 6, 7); test.</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>R · Requisiti di accesso (figura 5) <span class="tipo segn">ricostruzione manuale</span></summary>
+    <dl class="scheda">
+      <dt>Statuto</dt><dd>[P] Proposta originale. Giudizio interpretativo, fatto a mano.</dd>
+      <dt>Domanda</dt><dd>Quante condizioni e quanti testi servono per sapere se si ha diritto ai permessi?</dd>
+      <dt>Perché</dt><dd>Ponte verso il terzo livello: la tesi (cap. IV, § 1.2) indica come dato mancante "il numero di chi avrebbe diritto ai permessi senza riuscire a ottenerli". Il costo informativo della tutela è una delle condizioni dell'accesso effettivo.</dd>
+      <dt>Limiti</dt><dd>Esclude prassi amministrativa, circolari INPS e giurisprudenza.</dd>
+      <dt>Verifica</dt><dd><span class="verifica">Da rivedere con il relatore.</span></dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>G · Grafici e polarità (figura 1) <span class="tipo descr">visualizzazione</span></summary>
+    <dl class="scheda">
+      <dt>Che cosa mostrano</dt><dd>Nessuna misura nuova: i valori di A2 e A3 su due semicerchi. I triangoli indicano gli altri articoli analizzati.</dd>
+      <dt>Polarità</dt><dd>Gulpease: è nella formula (valori alti = parole e frasi più brevi). Periodi: assunzione delle formule di leggibilità (Fameli et al. 2014, § 10.2, p. 208); per questo il grafico non ha fasce.</dd>
+      <dt>Fasce Gulpease</dt><dd>40, 60, 80 per livello di istruzione, come nella tesi (cap. III, nota 441) e in Brunato e Venturi 2014 (p. 127, nota 55). <span class="verifica">Da verificare sull'originale.</span></dd>
+      <dt>Limiti</dt><dd>I grafici non sommano le misure in un voto.</dd>
+    </dl>
+  </details>
+
+  </div>
+</section>
+
+<footer>
+  <p>Il prototipo osserva proprietà del testo. Non misura la qualità della legge, la sua efficacia o la sua giustizia.</p>
+  <p>Codice: analisi.js (algoritmi), grafici.js (figure), vista.js (pagina). Test: test/test-analisi.js. Schede complete: SCHEDE-A.md nel repository.</p>
+</footer>
+</div>
+<script src="analisi.js"></script>
+<script src="grafici.js"></script>
+<script src="vista.js"></script>
+</body>
+</html>
