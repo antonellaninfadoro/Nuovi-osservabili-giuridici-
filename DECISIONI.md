@@ -49,3 +49,5 @@
 **2026-11-04 · Corpus del secondo prototipo completo al raggio 1.** Tutte le 20 righe della tabella hanno il testo, copiato da Antonella. Nove tipi di controllo automatico sui testi (coincidenza con le note di Normattiva, confronto fra versioni) documentati in relazioni/dati/LEGGIMI.md, osservazioni 1-16. Restano da copiare solo testi del raggio 2. La rete non è ancora disegnata: si attende l'approvazione delle schede di B (fase 1).
 
 **2026-11-04 · Simulazione nel repository.** Su richiesta di Antonella, la cartella fasi-successive/simulazione/ entra nel repository pubblico come pagina di prova. Non è collegata dalle tre pagine del sito e porta l'avviso "fase successiva, fuori dalla versione 1".
+
+**2026-11-04 · Fase 0: sito pubblicato.** Repository antonellaninfadoro/Nuovi-osservabili-giuridici-, GitHub Pages dal ramo main, cartella principale. Tre pagine: https://antonellaninfadoro.github.io/Nuovi-osservabili-giuridici-/ (framework), testo/, relazioni/. Collegamenti e assenza di errori verificati riproducendo la stessa struttura di indirizzi, su schermo desktop e mobile. Da qui in poi GitHub è la fonte ufficiale del codice.
