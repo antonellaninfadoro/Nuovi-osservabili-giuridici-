@@ -51,3 +51,7 @@
 **2026-11-04 · Simulazione nel repository.** Su richiesta di Antonella, la cartella fasi-successive/simulazione/ entra nel repository pubblico come pagina di prova. Non è collegata dalle tre pagine del sito e porta l'avviso "fase successiva, fuori dalla versione 1".
 
 **2026-11-04 · Fase 0: sito pubblicato.** Repository antonellaninfadoro/Nuovi-osservabili-giuridici-, GitHub Pages dal ramo main, cartella principale. Tre pagine: https://antonellaninfadoro.github.io/Nuovi-osservabili-giuridici-/ (framework), testo/, relazioni/. Collegamenti e assenza di errori verificati riproducendo la stessa struttura di indirizzi, su schermo desktop e mobile. Da qui in poi GitHub è la fonte ufficiale del codice.
+
+**2026-11-04 · Leggibilità per lettori esterni, pagina del framework.** Indicazione del relatore. Ogni passo si apre con una sola affermazione in evidenza, cifre in grande e uno schema; il testo esteso resta tutto sotto "Approfondisci" (controllo automatico: 102 frasi su 102 presenti). Testo più scuro (grigio #44494a invece di #646a6b), enfasi in grassetto. Algoritmi, dati e risultati invariati. Le pagine testo/ e relazioni/ seguiranno, una alla volta.
+
+**2026-11-04 · Immagine della testata.** Richiesta di Antonella: illustrazione dalla forma alla sostanza (linee intrecciate che convergono e si aprono in un ventaglio, colori dei quattro livelli). È decorativa e lo dichiara nel testo alternativo: non rappresenta dati. Una versione piccola fa da icona delle tre pagine.

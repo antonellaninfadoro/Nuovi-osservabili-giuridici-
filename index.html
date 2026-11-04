@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<link rel="icon" href="assets/icona.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Costruire osservabili giuridici</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -20,6 +21,10 @@
     <a class="n2" href="relazioni/index.html">Secondo prototipo · Le relazioni</a>
   </nav>
   <span class="etichetta">Tesi di laurea · Università degli Studi del Sannio · A.A. 2025/2026</span>
+  <figure class="emblema">
+    <img src="assets/emblema.svg" alt="Illustrazione: linee intrecciate a sinistra, come i rinvii di un testo normativo, convergono e si aprono a destra in un ventaglio ordinato; i colori passano dal blu e verde della forma all'ocra e al rosa della sostanza." width="1000" height="230">
+    <figcaption><span class="e-forma">Forma · il testo e le sue relazioni</span><span class="e-sost">Sostanza · gli effetti sulle persone</span></figcaption>
+  </figure>
   <h1>Costruire osservabili giuridici</h1>
   <p class="sottotitolo">Metodi computazionali per l'analisi empirica delle qualità e degli effetti delle norme. Un framework in quattro livelli, messo alla prova sui permessi lavorativi della legge 104/1992.</p>
   <p class="nota">Antonella Ninfadoro · relatore prof. Nicola Lettieri</p>
@@ -64,58 +69,106 @@
     <article class="passo" data-passo="0">
       <span class="etichetta">Il punto di partenza</span>
       <h2>Una legge promette una tutela. Possiamo osservare se la mantiene?</h2>
-      <p>L'art. 3, comma 2, della Costituzione chiede di rimuovere gli ostacoli che limitano "di fatto" l'uguaglianza. L'espressione sposta lo sguardo dal testo della norma alla vita delle persone. La computazione offre strumenti per osservare la distanza fra ciò che il diritto riconosce e ciò che le persone riescono a ottenere.</p>
-      <p>Il framework non è un metodo unico. Mette in relazione quattro elementi: un oggetto giuridico, una domanda conoscitiva, un'operazione che trasforma l'oggetto in dati, una tecnica che rende visibile una proprietà di quei dati.</p>
+      <p class="tesi">Il framework osserva la <b>distanza</b> fra ciò che il diritto <b>riconosce</b> e ciò che le persone riescono a <b>ottenere</b>.</p>
+      <ol class="catena" aria-label="I quattro elementi del framework">
+        <li><b>Oggetto</b><span>giuridico</span></li>
+        <li><b>Domanda</b><span>conoscitiva</span></li>
+        <li><b>Operazione</b><span>dall'oggetto ai dati</span></li>
+        <li><b>Tecnica</b><span>rende visibile una proprietà</span></li>
+      </ol>
+      <details class="altro">
+        <summary>Approfondisci</summary>
+        <p>L'art. 3, comma 2, della Costituzione chiede di rimuovere gli ostacoli che limitano "di fatto" l'uguaglianza. L'espressione sposta lo sguardo dal testo della norma alla vita delle persone. La computazione offre strumenti per osservare la distanza fra ciò che il diritto riconosce e ciò che le persone riescono a ottenere.</p>
+        <p>Il framework non è un metodo unico. Mette in relazione quattro elementi: un oggetto giuridico, una domanda conoscitiva, un'operazione che trasforma l'oggetto in dati, una tecnica che rende visibile una proprietà di quei dati.</p>
+      </details>
     </article>
 
     <article class="passo" data-passo="1">
       <span class="etichetta l1">Livello 1 · La disposizione</span>
       <h2>Prima si legge il testo, con strumenti che contano e riconoscono</h2>
-      <p>Il testo normativo è fatto di parole, e le parole si possono contare e riconoscere. Al primo livello si misurano leggibilità, struttura, rinvii, terminologia, regolarità formale. L'operazione è descrivere e misurare.</p>
-      <p class="dato">Nell'art. 33 un periodo ha in media <b>52,7 parole</b>. La stessa condizione della persona assistita è designata in <b>tre modi</b>, che corrispondono a strati diversi di modifiche.</p>
+      <p class="tesi">Si <b>misura</b> il testo: leggibilità, struttura, rinvii, terminologia, regolarità formale.</p>
+      <div class="cifre l1">
+        <div><b>52,7</b><span>parole in media per periodo, nell'art. 33</span></div>
+        <div><b>3</b><span>modi diversi di designare la condizione della persona assistita</span></div>
+      </div>
+      <details class="altro">
+        <summary>Approfondisci</summary>
+        <p>Il testo normativo è fatto di parole, e le parole si possono contare e riconoscere. Al primo livello si misurano leggibilità, struttura, rinvii, terminologia, regolarità formale. L'operazione è descrivere e misurare.</p>
+        <p>Nell'art. 33 un periodo ha in media <b>52,7 parole</b>. La stessa condizione della persona assistita è designata in <b>tre modi</b>, che corrispondono a strati diversi di modifiche.</p>
+      </details>
       <a class="vai" href="testo/index.html">Primo prototipo · La disposizione →</a>
     </article>
 
     <article class="passo" data-passo="2">
       <span class="etichetta l2">Livello 2 · Il corpus</span>
       <h2>Poi si guarda dove la norma sta, nella rete delle altre norme</h2>
-      <p>Una disposizione chiara, letta da sola, può diventare oscura dentro una catena di rinvii e modifiche. Al secondo livello i rinvii riconosciuti nel testo diventano gli archi di una rete. La domanda è se la norma sta bene nel sistema.</p>
-      <p class="dato">L'art. 33 rinvia a <b>4 altri atti</b>. Le sue note di aggiornamento registrano modifiche, interpretazioni, deroghe e una sentenza della Corte costituzionale: <b>20 relazioni candidate</b> da verificare.</p>
+      <p class="tesi">I <b>rinvii</b> riconosciuti nel testo diventano gli <b>archi</b> di una rete.</p>
+      <div class="cifre l2">
+        <div><b>4</b><span>altri atti richiamati dall'art. 33</span></div>
+        <div><b>20</b><span>relazioni candidate da verificare</span></div>
+      </div>
+      <details class="altro">
+        <summary>Approfondisci</summary>
+        <p>Una disposizione chiara, letta da sola, può diventare oscura dentro una catena di rinvii e modifiche. Al secondo livello i rinvii riconosciuti nel testo diventano gli archi di una rete. La domanda è se la norma sta bene nel sistema.</p>
+        <p>L'art. 33 rinvia a <b>4 altri atti</b>. Le sue note di aggiornamento registrano modifiche, interpretazioni, deroghe e una sentenza della Corte costituzionale: <b>20 relazioni candidate</b> da verificare.</p>
+      </details>
       <a class="vai" href="relazioni/index.html">Secondo prototipo · Le relazioni →</a>
     </article>
 
     <article class="passo" data-passo="3">
       <span class="etichetta l3">Livello 3 · Gli effetti reali</span>
       <h2>Poi si chiede chi riesce davvero a usare la tutela</h2>
-      <p>Il terzo livello esce dal testo ed entra nei dati sui destinatari. Attribuire un effetto a una norma richiede un disegno di ricerca adeguato. Il primo passo è costruire l'osservabile giusto.</p>
-      <p class="dato">I lavoratori privati che usano i permessi passano da <b>445.167</b> nel 2020 a <b>608.206</b> nel 2024 (INPS, come citato nella tesi). Manca il dato più importante: quante persone avrebbero diritto ai permessi senza riuscire a ottenerli. L'osservabile da costruire è il non accesso: chi ha i requisiti e non usa la tutela, dove e perché.</p>
-      <p class="nota">In questa prima versione il terzo livello è presentato come racconto. Il prototipo dedicato è previsto in una fase successiva.</p>
+      <p class="tesi">Si esce dal testo e si entra nei <b>dati sui destinatari</b>.</p>
+      <div class="cifre l3">
+        <div><b>445.167 → 608.206</b><span>lavoratori privati che usano i permessi, 2020 → 2024 (INPS, come citato nella tesi)</span></div>
+        <div class="manca"><b>?</b><span>persone con i requisiti che non usano la tutela: il dato che manca</span></div>
+      </div>
+      <details class="altro">
+        <summary>Approfondisci</summary>
+        <p>Il terzo livello esce dal testo ed entra nei dati sui destinatari. Attribuire un effetto a una norma richiede un disegno di ricerca adeguato. Il primo passo è costruire l'osservabile giusto.</p>
+        <p>I lavoratori privati che usano i permessi passano da <b>445.167</b> nel 2020 a <b>608.206</b> nel 2024 (INPS, come citato nella tesi). Manca il dato più importante: quante persone avrebbero diritto ai permessi senza riuscire a ottenerli. L'osservabile da costruire è il non accesso: chi ha i requisiti e non usa la tutela, dove e perché.</p>
+      </details>
+      <p class="nota stato-liv"><b>Solo racconto.</b> In questa prima versione il terzo livello è presentato come racconto. Il prototipo dedicato è previsto in una fase successiva.</p>
     </article>
 
     <article class="passo" data-passo="4">
       <span class="etichetta l4">Livello 4 · Gli scenari possibili</span>
       <h2>Infine si esplora ciò che non si può osservare</h2>
-      <p>La simulazione costruisce mondi possibili: che cosa accadrebbe con altre regole, altri tempi, altra informazione. I suoi risultati dipendono dalle ipotesi e vanno letti con l'analisi di sensibilità. Estende l'osservazione verso i possibili e non la sostituisce.</p>
-      <p class="dato">Per l'art. 33 si potrebbe simulare una popolazione ipotetica di aventi diritto che attraversa i passaggi ricostruiti nel primo prototipo: conoscere il diritto, ottenere l'accertamento, presentare la domanda, fruire dei permessi. Variando tempi e informazione si vedrebbe quale passaggio pesa di più.</p>
-      <p class="nota">Anche il quarto livello, in questa versione, è solo descritto. Una simulazione sarebbe un esperimento illustrativo basato su ipotesi esplicite, non una rappresentazione degli effetti reali.</p>
+      <p class="tesi">La <b>simulazione</b> costruisce mondi possibili: altre regole, altri tempi, altra informazione.</p>
+      <ol class="catena l4" aria-label="Passaggi che una simulazione potrebbe seguire">
+        <li><b>Conoscere</b><span>il diritto</span></li>
+        <li><b>Ottenere</b><span>l'accertamento</span></li>
+        <li><b>Presentare</b><span>la domanda</span></li>
+        <li><b>Fruire</b><span>dei permessi</span></li>
+      </ol>
+      <details class="altro">
+        <summary>Approfondisci</summary>
+        <p>La simulazione costruisce mondi possibili: che cosa accadrebbe con altre regole, altri tempi, altra informazione. I suoi risultati dipendono dalle ipotesi e vanno letti con l'analisi di sensibilità. Estende l'osservazione verso i possibili e non la sostituisce.</p>
+        <p>Per l'art. 33 si potrebbe simulare una popolazione ipotetica di aventi diritto che attraversa i passaggi ricostruiti nel primo prototipo: conoscere il diritto, ottenere l'accertamento, presentare la domanda, fruire dei permessi. Variando tempi e informazione si vedrebbe quale passaggio pesa di più.</p>
+      </details>
+      <p class="nota stato-liv"><b>Solo racconto.</b> Anche il quarto livello, in questa versione, è solo descritto. Una simulazione sarebbe un esperimento illustrativo basato su ipotesi esplicite, non una rappresentazione degli effetti reali.</p>
     </article>
 
     <article class="passo" data-passo="5">
       <span class="etichetta">Dalla bellezza alla giustizia</span>
       <h2>Ogni livello incorpora i precedenti, e la valutazione cresce con loro</h2>
+      <p class="tesi"><b>Bellezza</b> e <b>giustizia</b> sono i poli di un continuum di valutazione, <b>non punteggi da calcolare</b>.</p>
       <div class="continuum">
         <div class="c-poli"><b>Bellezza</b><b>Giustizia</b></div>
         <div class="c-barra"></div>
         <div class="c-criteri"><span>Comprensibilità</span><span>Coerenza</span><span>Accessibilità</span><span>Equità</span></div>
       </div>
-      <p>Bellezza e giustizia sono i poli di un continuum di valutazione, non punteggi da calcolare. I primi due livelli informano soprattutto un giudizio sulla qualità formale; il terzo e il quarto un giudizio sugli effetti. I dati non dicono che una legge è giusta. Rendono osservabili conseguenze rilevanti per quel giudizio, che resta affidato a un criterio normativo esplicito.</p>
+      <details class="altro">
+        <summary>Approfondisci</summary>
+        <p>Bellezza e giustizia sono i poli di un continuum di valutazione, non punteggi da calcolare. I primi due livelli informano soprattutto un giudizio sulla qualità formale; il terzo e il quarto un giudizio sugli effetti. I dati non dicono che una legge è giusta. Rendono osservabili conseguenze rilevanti per quel giudizio, che resta affidato a un criterio normativo esplicito.</p>
+      </details>
     </article>
   </div>
 </section>
 
 <section aria-labelledby="t-tre">
   <h2 id="t-tre">Tre prototipi per quattro livelli</h2>
-  <p>La tesi prevede tre prototipi. Questa prima versione del sito realizza i primi due come esperimenti e presenta il terzo e il quarto livello come racconto.</p>
+  <p class="tesi">La tesi prevede tre prototipi. Questa prima versione del sito realizza <b>i primi due come esperimenti</b> e presenta il terzo e il quarto livello <b>come racconto</b>.</p>
   <div class="livelli">
     <a class="lv disp" href="testo/index.html"><span class="lv-n">1</span><b>Testo / disposizione</b><small>lessico e struttura</small></a>
     <div class="lv-freccia" aria-hidden="true">→</div>
@@ -145,7 +198,7 @@
       <p>Nella prima versione i livelli 3 e 4 sono descritti nel percorso qui sopra. Il prototipo dedicato è previsto in una fase successiva, dopo l'approvazione del relatore.</p>
     </div>
   </div>
-  <p class="nota">Schema ripreso dai materiali del relatore ("Costruzione di osservabili giuridici") e dalla tesi, cap. III, § 2.1, e cap. IV, § 2. Tutti i prototipi sono dimostrazioni di fattibilità: mostrano che le procedure funzionano, non che producono conoscenza empirica validata.</p>
+  <p class="nota">Schema ripreso dai materiali del relatore ("Costruzione di osservabili giuridici") e dalla tesi, cap. III, § 2.1, e cap. IV, § 2. <b>Tutti i prototipi sono dimostrazioni di fattibilità</b>: mostrano che le procedure funzionano, non che producono conoscenza empirica validata.</p>
 </section>
 
 <footer>

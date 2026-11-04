@@ -37,7 +37,7 @@
 .con-scena #scena[data-passo="2"] .liv[data-liv="1"], .con-scena #scena[data-passo="2"] .liv[data-liv="2"],
 .con-scena #scena[data-passo="3"] .liv:not([data-liv="4"]),
 .con-scena #scena[data-passo="4"] .liv, .con-scena #scena[data-passo="5"] .liv { opacity: 1; }
-.con-scena .passo { opacity: 0.62; transition: opacity 0.3s ease; }
+.con-scena .passo { opacity: 0.9; transition: opacity 0.3s ease; }
 .con-scena .passo.attivo { opacity: 1; }
 
 /* schede dei tre prototipi */
@@ -54,4 +54,26 @@
   .scena { top: env(safe-area-inset-top, 0px); background: var(--fondo); padding-block: 8px; z-index: 2; border-bottom: 1px solid var(--linea); }
   .scena svg { max-width: 170px; margin: 0 auto; }
   .passo { min-height: 62vh; }
+}
+
+/* cifre principali e catene esplicative */
+.cifre { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.cifre div { display: grid; gap: 4px; align-content: start; padding: 10px 12px; border-left: 4px solid var(--neutro); background: var(--tinta); border-radius: 0 4px 4px 0; }
+.cifre b { font-size: 1.9rem; line-height: 1.1; font-weight: 800; }
+.cifre span { font-size: 0.9rem; line-height: 1.35; }
+.cifre.l1 div { border-color: var(--segno-disp); background: var(--fondo-disp); } .cifre.l1 b { color: var(--segno-disp); }
+.cifre.l2 div { border-color: var(--segno-corp); background: var(--fondo-corp); } .cifre.l2 b { color: var(--segno-corp); }
+.cifre.l3 div { border-color: var(--segno-eff); background: var(--fondo-eff); } .cifre.l3 b { color: var(--segno-eff); font-size: 1.45rem; }
+.cifre .manca { background: #fff !important; border-left-style: dashed !important; }
+.cifre .manca b { font-size: 1.9rem !important; }
+.catena { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; counter-reset: c; }
+.catena li { position: relative; display: grid; gap: 2px; padding: 8px 8px 8px 10px; background: var(--tinta); border-radius: 4px; font-size: 0.84rem; line-height: 1.3; }
+.catena li b { font-size: 0.98rem; }
+.catena li:not(:last-child)::after { content: "→"; position: absolute; right: -9px; top: 50%; transform: translateY(-50%); font-weight: 700; color: var(--inchiostro); z-index: 1; }
+.catena.l4 li { background: var(--fondo-sim); border-top: 3px solid var(--segno-sim); }
+.stato-liv b { color: var(--inchiostro); }
+@media (max-width: 560px) {
+  .catena { grid-template-columns: 1fr; gap: 14px; }
+  .catena li { grid-template-columns: auto 1fr; gap: 6px; align-items: baseline; }
+  .catena li:not(:last-child)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -15px; transform: translateX(-50%); }
 }
