@@ -6,7 +6,7 @@
   --fondo: #ffffff;
   --superficie: #ffffff;
   --inchiostro: #111111;
-  --tenue: #646a6b;
+  --tenue: #44494a;
   --linea: #d3d4d0;
   --accento: #2a6cb0;
   --accento-tenue: #edf1f3;
@@ -37,7 +37,7 @@
 * { box-sizing: border-box; }
 body {
   margin: 0; background: var(--fondo); color: var(--inchiostro);
-  font: 15px/1.55 var(--sans);
+  font: 16px/1.55 var(--sans);
   font-variant-numeric: tabular-nums;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
@@ -45,13 +45,13 @@ body {
 .pagina { max-width: 980px; margin: 0 auto; padding-block: 24px 64px; display: grid; gap: 32px; }
 h1, h2, h3 { text-wrap: balance; line-height: 1.2; margin: 0; }
 h1 { font: 600 clamp(1.6rem, 4vw, 2.2rem)/1.15 var(--serif); }
-h2 { font: 600 1.3rem/1.25 var(--serif); }
-h3 { font: 600 0.95rem/1.3 var(--sans); }
+h2 { font: 700 1.4rem/1.25 var(--serif); }
+h3 { font: 700 1.02rem/1.3 var(--sans); }
 p { margin: 0; max-width: 68ch; }
 a { color: var(--accento); }
 :focus-visible { outline: 2px solid var(--accento); outline-offset: 2px; }
 
-.etichetta { font: 500 0.72rem/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tenue); }
+.etichetta { font: 700 0.72rem/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--tenue); }
 
 /* intestazione */
 .testata { display: grid; gap: 14px; border-bottom: 1px solid var(--linea); padding-bottom: 20px; }
@@ -350,3 +350,15 @@ th.n { text-align: right; }
 
 a.pr { text-decoration: none; display: block; }
 a.pr:hover { outline: 2px solid var(--inchiostro); }
+
+/* Leggibilità per lettori esterni (relatore, 4 novembre 2026): affermazione in evidenza, dettagli a richiesta */
+.sottotitolo { color: var(--inchiostro); }
+.tesi { font-size: 1.1rem; line-height: 1.45; font-weight: 600; }
+.tesi b { font-weight: 800; }
+.tesi.domanda { border-left: 4px solid var(--fascia-3); padding: 4px 0 4px 12px; }
+.tesi.domanda span { display: block; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fascia-3); font-weight: 700; }
+details.altro { border: 0 !important; padding: 0 !important; margin: 0; }
+details.altro summary { font-size: 0.88rem; font-weight: 700; color: var(--accento); width: fit-content; cursor: pointer; }
+details.altro[open] { display: grid; gap: 10px; }
+.conta-cop { display: flex; flex-wrap: wrap; gap: 8px; }
+.conta-cop .st { font-size: 0.85rem; padding: 4px 10px; }

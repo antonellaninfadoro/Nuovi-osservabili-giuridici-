@@ -22,3 +22,9 @@
   .corpus td, .corpus th { border: 0; padding: 0 4px; }
   .corpus td:first-child { white-space: normal; }
 }
+
+/* leggibilità per lettori esterni */
+.tesi.domanda { border-left: 4px solid var(--segno-corp); padding: 4px 0 4px 12px; }
+.tesi.domanda span { display: block; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--segno-corp); font-weight: 700; }
+.conta-cop { display: flex; flex-wrap: wrap; gap: 8px; }
+.conta-cop .st { font-size: 0.85rem; padding: 4px 10px; }

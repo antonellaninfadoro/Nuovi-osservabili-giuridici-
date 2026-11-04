@@ -127,3 +127,15 @@ details.altro[open] summary { margin-bottom: 2px; }
 .emblema img { width: 100%; height: auto; display: block; }
 .emblema figcaption { display: flex; justify-content: space-between; gap: 12px; font-size: 0.8rem; font-weight: 700; }
 .e-forma { color: var(--segno-disp); } .e-sost { color: var(--segno-sim); text-align: right; }
+
+/* introduzione e fonti */
+.tre { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.tre-c { display: grid; gap: 10px; align-content: start; padding: 16px; border-top: 4px solid var(--liv-disp); background: var(--fondo-disp); border-radius: 0 0 6px 6px; }
+.tre-c:nth-child(2) { border-color: var(--liv-eff); background: var(--fondo-eff); }
+.tre-c.contributo { border-color: var(--segno-corp); background: var(--fondo-corp); }
+.tre-c .tesi { font-size: 1.04rem; }
+.tre-c ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 0.93rem; }
+.tre-c small { color: var(--tenue); font-size: 0.8rem; }
+@media (max-width: 820px) { .tre { grid-template-columns: 1fr; } }
+.fonti-gruppi { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px 24px; }
+.fonti-gruppi ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 8px; font-size: 0.9rem; }

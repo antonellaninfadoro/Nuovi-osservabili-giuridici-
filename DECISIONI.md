@@ -55,3 +55,7 @@
 **2026-11-04 · Leggibilità per lettori esterni, pagina del framework.** Indicazione del relatore. Ogni passo si apre con una sola affermazione in evidenza, cifre in grande e uno schema; il testo esteso resta tutto sotto "Approfondisci" (controllo automatico: 102 frasi su 102 presenti). Testo più scuro (grigio #44494a invece di #646a6b), enfasi in grassetto. Algoritmi, dati e risultati invariati. Le pagine testo/ e relazioni/ seguiranno, una alla volta.
 
 **2026-11-04 · Immagine della testata.** Richiesta di Antonella: illustrazione dalla forma alla sostanza (linee intrecciate che convergono e si aprono in un ventaglio, colori dei quattro livelli). È decorativa e lo dichiara nel testo alternativo: non rappresenta dati. Una versione piccola fa da icona delle tre pagine.
+
+**2026-11-04 · Leggibilità estesa ai due prototipi.** Stesso metodo della pagina del framework: affermazione in evidenza, conteggi in etichette, spiegazioni e tabelle sotto voci da aprire. Controllo automatico: testo/ 491 frasi su 491, relazioni/ 224 su 224. I 54 test del primo prototipo restano superati; algoritmi e dati invariati.
+
+**2026-11-04 · Sezioni "Di che cosa parliamo" e "Fonti" nella pagina del framework.** Richiesta di Antonella. Il contenuto viene dalla tesi (versione in corso, pagine citate) e dalle fonti già usate nelle schede; i punti da verificare restano marcati. Gli osservabili nuovi dell'art. 33 sono dichiarati proposta originale [P].
