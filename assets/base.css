@@ -199,3 +199,9 @@ details.altro[open] summary { margin-bottom: 2px; }
   .percorso-tesi { grid-template-columns: 1fr; gap: 14px; }
   .percorso-tesi li:not(:last-child)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -15px; transform: translateX(-50%); }
 }
+
+.ib-parti { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.ib-parti > div { display: grid; gap: 6px; padding: 14px 16px; border-left: 4px solid var(--inchiostro); background: var(--tinta); border-radius: 0 6px 6px 0; }
+.ib-parti p { font-size: 1.02rem; line-height: 1.5; }
+.ib-fonte { color: var(--tenue); font-size: 0.8rem; }
+@media (max-width: 820px) { .ib-parti { grid-template-columns: 1fr; } }

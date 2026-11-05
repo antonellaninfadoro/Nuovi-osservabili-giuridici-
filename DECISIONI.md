@@ -68,4 +68,4 @@
 
 **2026-11-05 · Date dei testi della legge 104.** Artt. 3, 4 e 33: vigenti al 5 novembre 2026, consultati il 5 novembre 2026 (indicazione di Antonella). La data "in vigore dal" di ciascun articolo resta da leggere su Normattiva.
 
-**2026-11-05 · Introduzione "In breve".** Su richiesta di Antonella, in testa alla pagina del framework (IT e EN): a che cosa serve la tesi in parole semplici, e il percorso dei capitoli I-III (spiegazione a parole) verso il cap. IV (la prova pratica), con i rinvii alle pagine della tesi.
+**2026-11-05 · Introduzione "La tesi in sintesi".** Su richiesta di Antonella, in testa alla pagina del framework (IT e EN): il sito accompagna la tesi; di che cosa parla e perché (dall'abstract, p. 10); il percorso dei capitoli I-III (quadro teorico) verso il cap. IV (la prova su un caso concreto). La sezione successiva diventa "Tre concetti chiave".
