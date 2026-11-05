@@ -163,12 +163,20 @@
     $('m-segn').innerHTML = s.map(function (x) { return '<dt>' + esc(x[0]) + '</dt><dd>' + esc(x[1]) + '</dd>'; }).join('');
   }
 
+  var MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+  function dataIt(v) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v);
+    return m ? (+m[3]) + ' ' + MESI[+m[2] - 1] + ' ' + m[1] : v;
+  }
+  // Dati registrati del testo salvato in dati/ (vedi l104-art33-vigente.meta.md)
+  var CONSULTAZIONE_SALVATO = '2026-11-05';
+
   function rendiFonte() {
     var v = $('f-versione').value;
     var parti = [$('f-atto').value || 'Atto non indicato',
       v ? (v === 'vigente' ? 'testo vigente' : 'testo originario') : 'versione non indicata',
-      $('f-vigenza').value ? 'vigente al ' + $('f-vigenza').value : 'data di vigenza non indicata',
-      $('f-consultazione').value ? 'consultato il ' + $('f-consultazione').value : 'data di consultazione non indicata'];
+      $('f-vigenza').value ? 'vigente al ' + dataIt($('f-vigenza').value) : 'data di vigenza non indicata',
+      $('f-consultazione').value ? 'consultato il ' + dataIt($('f-consultazione').value) : 'data di consultazione non indicata'];
     $('r-fonte').textContent = 'Fonte: ' + parti.join(' · ') + '.';
   }
 
@@ -351,6 +359,7 @@
     var fatto = function (t) {
       $('f-testo').value = t;
       if (!$('f-versione').value) $('f-versione').value = 'vigente';
+      if (!$('f-consultazione').value) $('f-consultazione').value = CONSULTAZIONE_SALVATO;
       analizza();
     };
     var pre = window.TESTI_PRECARICATI && window.TESTI_PRECARICATI['33'];

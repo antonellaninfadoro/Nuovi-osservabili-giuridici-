@@ -7,4 +7,5 @@
 - Vigente al: DA REGISTRARE
 - URL della pagina: DA REGISTRARE
 - Copiato da: Antonella Ninfadoro, 3 novembre 2026
+- Consultato il: 5 novembre 2026 (data indicata da Antonella)
 - Note: il file contiene anche le note "AGGIORNAMENTO" di Normattiva, escluse dall'analisi.
