@@ -169,7 +169,7 @@
     return m ? (+m[3]) + ' ' + MESI[+m[2] - 1] + ' ' + m[1] : v;
   }
   // Dati registrati del testo salvato in dati/ (vedi l104-art33-vigente.meta.md)
-  var CONSULTAZIONE_SALVATO = '2026-11-05';
+  var CONSULTAZIONE_SALVATO = '2026-11-05', VIGENZA_SALVATO = '2026-11-05';
 
   function rendiFonte() {
     var v = $('f-versione').value;
@@ -360,6 +360,7 @@
       $('f-testo').value = t;
       if (!$('f-versione').value) $('f-versione').value = 'vigente';
       if (!$('f-consultazione').value) $('f-consultazione').value = CONSULTAZIONE_SALVATO;
+      if (!$('f-vigenza').value) $('f-vigenza').value = VIGENZA_SALVATO;
       analizza();
     };
     var pre = window.TESTI_PRECARICATI && window.TESTI_PRECARICATI['33'];

@@ -4,7 +4,7 @@
 - Articolo: 33 (Agevolazioni)
 - Fonte: Normattiva
 - Versione: testo vigente
-- Vigente al: DA REGISTRARE
+- Vigente al: 5 novembre 2026 (indicato da Antonella)
 - URL della pagina: DA REGISTRARE
 - Copiato da: Antonella Ninfadoro, 3 novembre 2026
 - Consultato il: 5 novembre 2026 (data indicata da Antonella)
