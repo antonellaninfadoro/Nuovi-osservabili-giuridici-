@@ -176,3 +176,7 @@ details.altro[open] summary { margin-bottom: 2px; }
   .transizione { grid-template-columns: 1fr; gap: 4px; }
   .transizione span, .transizione span:first-child { clip-path: none; padding-left: 12px; border-radius: 4px; }
 }
+
+.nav .lingua { margin-left: auto; font-weight: 700; color: var(--accento) !important; }
+.nav small { font-size: 0.75em; }
+.avviso-lingua { font-size: 0.84rem; background: var(--tinta); border-left: 3px solid var(--accento); padding: 8px 12px; max-width: 68ch; }
