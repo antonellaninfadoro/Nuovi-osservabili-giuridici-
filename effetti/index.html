@@ -38,16 +38,16 @@
     <a class="pr p2" href="../relazioni/index.html">Secondo prototipo</a>
     <div class="pr p3 attivo">Terzo prototipo · questa pagina</div>
   </div>
-  <p>Il primo prototipo ha mostrato che, per sapere se ha diritto ai tre giorni di permesso, una persona deve superare quattro passaggi e consultare altri atti. Questo prototipo chiede che cosa succede dopo: <b>quante persone arrivano davvero a usare la tutela, e che cosa la ferma?</b></p>
-  <p>Il prototipo tiene separate due forme di conoscenza, come chiede la tesi (cap. III, terza regola di lettura della griglia). Gli effetti <b>osservati</b> poggiano su dati ufficiali. Gli esiti <b>simulati</b> dipendono dalle ipotesi del modello: esplorano mondi possibili e non descrivono la realtà.</p>
-  <div class="stato"><strong>Prototipo v0.2, 11 novembre 2026. Esperimento illustrativo svolto.</strong> Dimostrazione di fattibilità. I dati della prima parte sono pochi e vanno ampliati. La simulazione della seconda parte è stata eseguita e ripetuta 100 volte, ma è illustrativa: non è calibrata né validata su dati reali (tesi, cap. IV, § 2, c).</div>
+  <p class="tesi">Quante persone arrivano davvero a usare la tutela, e che cosa le ferma?</p>
+  <p>Due forme di conoscenza, tenute separate: gli effetti <b>osservati</b> poggiano su dati ufficiali; gli esiti <b>simulati</b> dipendono dalle ipotesi del modello.</p>
+  <div class="stato"><strong>v0.2, 11 novembre 2026 · esperimento illustrativo svolto.</strong> Simulazione ripetuta 100 volte, non calibrata né validata su dati reali (tesi, cap. IV, § 2, c).</div>
 </section>
 
 <!-- ============ LIVELLO 3 ============ -->
 <section class="parte eff" aria-labelledby="t-l3">
   <span class="statuto osservato">Livello 3 · effetti osservati · dati ufficiali</span>
   <h2 id="t-l3">Sappiamo quanti usano i permessi. Non sappiamo quanti ne avrebbero diritto.</h2>
-  <p>L'INPS conta i lavoratori dipendenti del settore privato che hanno usato i permessi per assistere un familiare. Il numero cresce di un terzo in quattro anni. Manca però il termine con cui confrontarlo: quante persone avevano i requisiti. Senza questo denominatore non si può misurare lo scarto fra tutela promessa e tutela fruita.</p>
+  <p>L'INPS conta chi ha usato i permessi nel settore privato: un terzo in più in quattro anni. Manca il denominatore, cioè quante persone avevano i requisiti.</p>
 
   <figure class="figura">
     <figcaption><span class="etichetta">Figura 1 · Fruitori e aventi diritto</span>
@@ -59,14 +59,16 @@
   <figure class="figura">
     <figcaption><span class="etichetta">Figura 2 · La norma cambia mentre si misura</span>
       <h3>Le modifiche all'art. 33 attorno ai dati</h3>
-      <p>Le due misure INPS cadono in anni in cui la disciplina cambia. Ogni variazione dei fruitori va letta tenendo conto di queste modifiche: è il secondo livello che entra nel terzo.</p></figcaption>
+      <p>Ogni variazione dei fruitori va letta con le modifiche della disciplina: il secondo livello entra nel terzo.</p></figcaption>
     <div class="diagramma" id="fig-tempo"></div>
     <p class="nota">Fonti: note di aggiornamento del testo vigente dell'art. 33 su Normattiva (sentenza 213/2016; d.l. 18/2020, art. 24, comma 1); tesi, cap. IV, § 1.2 (d.lgs. 105/2022; d.lgs. 62/2024 e rinvio al 2027).</p>
   </figure>
 
+  <details class="altro">
+  <summary>Come costruire l'osservabile mancante: il non accesso</summary>
   <div class="due">
     <div class="riquadro">
-      <h3>Come costruire l'osservabile mancante</h3>
+      <h3>Tre dati per lo stesso anno e territorio</h3>
       <p>La domanda giusta non è "la legge 104 funziona?" ma: <b>chi, pur avendo i requisiti, non usa i permessi, dove e perché?</b> Servono tre dati per lo stesso anno e territorio:</p>
       <ol>
         <li>persone con gravità accertata ai sensi dell'art. 3, comma 3 (accertamenti dell'art. 4);</li>
@@ -79,17 +81,18 @@
       <h3>Un modello metodologico: la rinuncia alle cure</h3>
       <p>La Porta e Zapperi misurano la quota di persone che rinunciano a visite mediche, distinguendo il 20% più povero dal 20% più ricco e le ragioni della rinuncia, come il costo o le liste d'attesa. È un osservabile semplice: il diritto esiste, e si misura chi non riesce a esercitarlo.</p>
       <p>L'analogo per la 104 sarebbe il <b>non accesso ai permessi</b> pur avendo i requisiti, disaggregato per territorio e condizione.</p>
-      <p class="nota">C.A.M. La Porta, S. Zapperi, <i>Inequality and Health. A Quantitative Approach</i>, Peter Lang, 2026, § 4.1, pp. 38-40 (dati Eurostat, EU-SILC). Il volume è divulgativo: per la tesi conviene citare anche gli articoli scientifici degli autori.</p>
+      <p class="nota">C.A.M. La Porta, S. Zapperi, <i>Inequality and Health. A Quantitative Approach</i>, Peter Lang, 2026, § 4.1, pp. 38-40 (dati Eurostat, EU-SILC).</p>
     </div>
   </div>
+  </details>
 </section>
 
 <!-- ============ LIVELLO 4 ============ -->
 <section class="parte sim" aria-labelledby="t-l4">
   <span class="statuto simulato">Livello 4 · esiti simulati · ipotesi esplicite</span>
   <h2 id="t-l4">Se non possiamo osservare lo scarto, possiamo esplorare da che cosa dipende</h2>
-  <p>La simulazione costruisce una popolazione <b>ipotetica</b> di 1.000 persone che hanno tutte i requisiti per i permessi. Ognuna deve attraversare i passaggi ricostruiti nel primo prototipo: conoscere il diritto, ottenere l'accertamento della gravità, presentare la domanda, fruire dei permessi. Chi conosce il diritto può informare i propri contatti. Metà della popolazione vive in un territorio A, metà in un territorio B, che differiscono solo per i tempi di accertamento.</p>
-  <p class="avviso"><b>Nessun numero di questa sezione descrive la realtà.</b> I parametri sono ipotesi scelte per rendere leggibile l'esperimento. Servono a capire quali meccanismi pesano di più e quali dati andrebbero raccolti.</p>
+  <p>1.000 persone <b>ipotetiche</b>, tutte con i requisiti, attraversano quattro passaggi: conoscere il diritto, ottenere l'accertamento, presentare la domanda, fruire. Chi sa informa i propri contatti. I territori A e B differiscono solo per i tempi di accertamento.</p>
+  <p class="avviso"><b>Nessun numero di questa sezione descrive la realtà.</b> I parametri sono ipotesi dichiarate.</p>
 
   <div class="laboratorio">
     <div class="comandi">
@@ -119,14 +122,12 @@
   <div class="ricava">
     <span class="etichetta">Che cosa se ne ricava, dentro il modello · media di 100 esecuzioni</span>
     <ul>
-      <li><b>Nell'ipotesi di base fruisce il 44,6% degli aventi diritto</b> (fra 40,0% e 48,4% nelle 100 esecuzioni). Gli altri si fermano lungo il percorso: il 14,1% non sa del diritto, il 23,8% aspetta ancora l'accertamento, il 12,4% è accertato ma non presenta la domanda, il 5,0% incontra un ostacolo sul lavoro.</li>
-      <li><b>Fra gli interventi provati, l'informazione sposta di più.</b> Se gli informati all'inizio passano dal 40% al 90%, fruisce il 59,8%: 15,2 punti in più.</li>
-      <li><b>I tempi di accertamento creano la differenza fra territori.</b> Nel territorio rapido fruisce il 51,5%, in quello lento il 37,8%. Con tempi uguali lo scarto scompare (51,5% e 51,7%).</li>
-      <li><b>Gli ostacoli sul lavoro pesano meno.</b> Se scendono dal 10% al 2%, fruisce il 48,6%.</li>
-      <li><b>Anche con tutti gli interventi, circa un quarto resta fuori</b> dopo un anno: fruisce il 73,3%.</li>
-      <li><b>Quindi i dati da cercare sono quattro:</b> il numero degli aventi diritto, i tempi reali di accertamento per territorio, le domande respinte o abbandonate, quante persone con i requisiti conoscono il diritto.</li>
+      <li><b>Base: fruisce il 44,6%.</b> Il 23,8% aspetta ancora l'accertamento, il 14,1% non sa del diritto.</li>
+      <li><b>L'informazione sposta di più:</b> con il 90% di informati, 59,8%.</li>
+      <li><b>I tempi fanno la differenza fra territori:</b> 51,5% contro 37,8%; con tempi uguali lo scarto scompare.</li>
+      <li><b>Dati da cercare:</b> aventi diritto, tempi reali di accertamento, domande abbandonate, conoscenza del diritto.</li>
     </ul>
-    <p class="nota">Numeri ipotetici: valgono solo dentro le ipotesi del modello (scheda S1). Sono medie di 100 esecuzioni con semi da 1 a 100, come nella tesi (cap. IV, § 2, c, tabelle 5 e 6). Indicano che cosa misurare nella realtà, non quanto valgono le cose nella realtà.</p>
+    <p class="nota">Numeri ipotetici, validi solo dentro le ipotesi del modello (scheda S1). Tesi, cap. IV, § 2, c, tabelle 5 e 6.</p>
   </div>
 
   <div class="due">

@@ -79,3 +79,8 @@
 }
 
 .cifre.l4 div { border-color: var(--segno-sim); background: var(--fondo-sim); } .cifre.l4 b { color: var(--segno-sim); font-size: 1.45rem; }
+.spr-n { font-size: 2rem; line-height: 1.05; font-weight: 800; }
+.spr.disp .spr-n { color: var(--segno-disp); } .spr.corp .spr-n { color: var(--segno-corp); } .spr.eff .spr-n { color: var(--segno-eff); }
+.spr-d { font-weight: 600; }
+.spr-no { color: var(--tenue); font-size: 0.86rem !important; }
+.fonti summary { cursor: pointer; font-weight: 700; }
