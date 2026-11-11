@@ -15,5 +15,13 @@ verifica('nessuno informato e nessun passaparola possibile: nessuno fruisce', ne
 var sens = M.sensibilita(M.BASE, 'infoIniziale', [0.2, 0.4, 0.6, 0.8, 1]);
 verifica('piu\' informazione iniziale, piu\' fruizione', sens.every(function (x, i) { return i === 0 || x.fruizione >= sens[i - 1].fruizione; }));
 verifica('tempi piu\' lunghi nel territorio B riducono la fruizione in B', a.fruizioneB < a.fruizioneA);
+// Ripetizioni (100 semi)
+var rip = M.ripeti({}), rip2 = M.ripeti({});
+verifica('ripetizioni: stesso risultato a ogni esecuzione', JSON.stringify(rip) === JSON.stringify(rip2));
+verifica('ripetizioni: la media sta fra il minimo e il massimo', rip.min <= rip.media && rip.media <= rip.max);
+verifica('ripetizioni: le fasi medie sommano a 1', Math.abs(rip.fasi.reduce(function (x, y) { return x + y; }, 0) - 1) < 1e-9);
+verifica('ripetizioni: con tempi uguali lo scarto fra A e B resta sotto un punto', Math.abs(M.ripeti({ tempoB: M.BASE.tempoA }).mediaA - M.ripeti({ tempoB: M.BASE.tempoA }).mediaB) < 0.01);
+var sensR = M.sensibilita(M.BASE, 'infoIniziale', [0.1, 0.4, 0.9], 100);
+verifica('sensibilita\' su 100 ripetizioni: piu\' informazione, piu\' fruizione', sensR[0].fruizione < sensR[1].fruizione && sensR[1].fruizione < sensR[2].fruizione);
 console.log('\n' + ok + ' superati, ' + ko + ' falliti');
 process.exit(ko ? 1 : 0);

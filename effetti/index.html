@@ -6,7 +6,7 @@
 <title>Terzo prototipo · Effetti e scenari</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
-<link rel="stylesheet" href="../../assets/base.css">
+<link rel="stylesheet" href="../assets/base.css">
 <link rel="stylesheet" href="stile.css">
 </head>
 <body>
@@ -14,12 +14,11 @@
 
 <header class="testata">
   <nav class="nav" aria-label="Sezioni del sito">
-    <a href="../../index.html">Il framework</a>
-    <a class="n1" href="../../testo/index.html">Primo prototipo · La disposizione</a>
-    <a class="n2" href="../../relazioni/index.html">Secondo prototipo · Le relazioni</a>
+    <a href="../index.html">Il framework</a>
+    <a class="n1" href="../testo/index.html">Primo prototipo · La disposizione</a>
+    <a class="n2" href="../relazioni/index.html">Secondo prototipo · Le relazioni</a>
     <a class="n3" href="index.html" aria-current="page">Terzo prototipo · La tutela applicata</a>
   </nav>
-  <div class="stato"><strong>Fase successiva, fuori dalla versione 1.</strong> Pagina di prova, collegata al sito come esperimento illustrativo. Da sottoporre al relatore.</div>
   <span class="etichetta">Terzo e quarto livello di indagine · Attuazione ed effetti · Simulazione controfattuale</span>
   <h1>Terzo prototipo. Dalla tutela scritta alla tutela applicata: i permessi dell'art. 33</h1>
   <p class="sottotitolo">Che cosa sappiamo di chi usa davvero i permessi, che cosa non sappiamo, e come si può esplorare ciò che non si osserva.</p>
@@ -28,20 +27,20 @@
 <section class="apertura" aria-labelledby="t-posto">
   <h2 id="t-posto">Il posto del prototipo nel framework</h2>
   <div class="livelli" role="img" aria-label="Il terzo prototipo copre il terzo e il quarto livello">
-    <a class="lv disp" href="../../testo/index.html"><span class="lv-n">1</span><b>Testo / disposizione</b><small>lessico e struttura</small></a>
+    <a class="lv disp" href="../testo/index.html"><span class="lv-n">1</span><b>Testo / disposizione</b><small>lessico e struttura</small></a>
     <div class="lv-freccia" aria-hidden="true">→</div>
-    <a class="lv corp" href="../../relazioni/index.html"><span class="lv-n">2</span><b>Corpus / sistema</b><small>relazioni tra fonti</small></a>
+    <a class="lv corp" href="../relazioni/index.html"><span class="lv-n">2</span><b>Corpus / sistema</b><small>relazioni tra fonti</small></a>
     <div class="lv-freccia" aria-hidden="true">→</div>
     <div class="lv eff"><span class="lv-n">3</span><b>Effetti reali</b><small>accesso e distribuzione</small></div>
     <div class="lv-freccia" aria-hidden="true">→</div>
     <div class="lv sim"><span class="lv-n">4</span><b>Scenari possibili</b><small>alternative regolative</small></div>
-    <a class="pr p1" href="../../testo/index.html">Primo prototipo</a>
-    <a class="pr p2" href="../../relazioni/index.html">Secondo prototipo</a>
+    <a class="pr p1" href="../testo/index.html">Primo prototipo</a>
+    <a class="pr p2" href="../relazioni/index.html">Secondo prototipo</a>
     <div class="pr p3 attivo">Terzo prototipo · questa pagina</div>
   </div>
   <p>Il primo prototipo ha mostrato che, per sapere se ha diritto ai tre giorni di permesso, una persona deve superare quattro passaggi e consultare altri atti. Questo prototipo chiede che cosa succede dopo: <b>quante persone arrivano davvero a usare la tutela, e che cosa la ferma?</b></p>
   <p>Il prototipo tiene separate due forme di conoscenza, come chiede la tesi (cap. III, terza regola di lettura della griglia). Gli effetti <b>osservati</b> poggiano su dati ufficiali. Gli esiti <b>simulati</b> dipendono dalle ipotesi del modello: esplorano mondi possibili e non descrivono la realtà.</p>
-  <div class="stato"><strong>Prototipo v0.1, 4 novembre 2026.</strong> Dimostrazione di fattibilità. I dati della prima parte sono pochi e vanno ampliati; la simulazione della seconda parte è illustrativa e non è calibrata su dati reali.</div>
+  <div class="stato"><strong>Prototipo v0.2, 11 novembre 2026. Esperimento illustrativo svolto.</strong> Dimostrazione di fattibilità. I dati della prima parte sono pochi e vanno ampliati. La simulazione della seconda parte è stata eseguita e ripetuta 100 volte, ma è illustrativa: non è calibrata né validata su dati reali (tesi, cap. IV, § 2, c).</div>
 </section>
 
 <!-- ============ LIVELLO 3 ============ -->
@@ -99,7 +98,9 @@
         <button type="button" data-scenario="base" aria-pressed="true">Ipotesi di base</button>
         <button type="button" data-scenario="informazione" aria-pressed="false">Informazione d'ufficio</button>
         <button type="button" data-scenario="tempi" aria-pressed="false">Accertamento rapido anche in B</button>
+        <button type="button" data-scenario="termine" aria-pressed="false">Tre mesi in entrambi i territori</button>
         <button type="button" data-scenario="garanzia" aria-pressed="false">Meno ostacoli dal datore</button>
+        <button type="button" data-scenario="tutti" aria-pressed="false">Tutti gli interventi insieme</button>
       </div>
       <div class="parametri" id="parametri"></div>
       <button type="button" class="secondario" id="b-ripristina">Ripristina l'ipotesi di base</button>
@@ -108,7 +109,7 @@
     <div class="esiti">
       <div class="cifra"><strong id="r-quota">–</strong><span id="r-testo"></span></div>
       <figure class="figura stretta">
-        <figcaption><span class="etichetta">Figura 3 · Mille persone con i requisiti, dopo 12 mesi</span></figcaption>
+        <figcaption><span class="etichetta">Figura 3 · Mille persone con i requisiti, dopo 12 mesi · una delle 100 esecuzioni</span></figcaption>
         <div class="griglie" id="fig-agenti"></div>
         <div class="leg-fasi" id="leg-fasi"></div>
       </figure>
@@ -116,14 +117,16 @@
   </div>
 
   <div class="ricava">
-    <span class="etichetta">Che cosa se ne ricava, dentro il modello</span>
+    <span class="etichetta">Che cosa se ne ricava, dentro il modello · media di 100 esecuzioni</span>
     <ul>
-      <li><b>L'informazione pesa più di tutto.</b> Con il 10% di persone informate all'inizio fruisce il 21,9%; con il 40% il 47,8%; con il 90% il 62,2%.</li>
-      <li><b>I tempi di accertamento creano una differenza fra territori.</b> Il territorio lento si ferma al 39%, quello rapido arriva al 56%. Con tempi uguali, il territorio lento sale al 50,8%.</li>
-      <li><b>Gli ostacoli sul lavoro pesano meno.</b> Se scendono dal 10% al 2%, chi fruisce passa dal 47,8% al 51,3%.</li>
-      <li><b>Quindi i dati da cercare sono tre:</b> quante persone con i requisiti conoscono il diritto, i tempi reali di accertamento per territorio, i casi di ostacolo da parte del datore.</li>
+      <li><b>Nell'ipotesi di base fruisce il 44,6% degli aventi diritto</b> (fra 40,0% e 48,4% nelle 100 esecuzioni). Gli altri si fermano lungo il percorso: il 14,1% non sa del diritto, il 23,8% aspetta ancora l'accertamento, il 12,4% è accertato ma non presenta la domanda, il 5,0% incontra un ostacolo sul lavoro.</li>
+      <li><b>Fra gli interventi provati, l'informazione sposta di più.</b> Se gli informati all'inizio passano dal 40% al 90%, fruisce il 59,8%: 15,2 punti in più.</li>
+      <li><b>I tempi di accertamento creano la differenza fra territori.</b> Nel territorio rapido fruisce il 51,5%, in quello lento il 37,8%. Con tempi uguali lo scarto scompare (51,5% e 51,7%).</li>
+      <li><b>Gli ostacoli sul lavoro pesano meno.</b> Se scendono dal 10% al 2%, fruisce il 48,6%.</li>
+      <li><b>Anche con tutti gli interventi, circa un quarto resta fuori</b> dopo un anno: fruisce il 73,3%.</li>
+      <li><b>Quindi i dati da cercare sono quattro:</b> il numero degli aventi diritto, i tempi reali di accertamento per territorio, le domande respinte o abbandonate, quante persone con i requisiti conoscono il diritto.</li>
     </ul>
-    <p class="nota">Numeri ipotetici: valgono solo dentro le ipotesi del modello (scheda S1), con seme fisso 104. Indicano che cosa misurare nella realtà, non quanto valgono le cose nella realtà.</p>
+    <p class="nota">Numeri ipotetici: valgono solo dentro le ipotesi del modello (scheda S1). Sono medie di 100 esecuzioni con semi da 1 a 100, come nella tesi (cap. IV, § 2, c, tabelle 5 e 6). Indicano che cosa misurare nella realtà, non quanto valgono le cose nella realtà.</p>
   </div>
 
   <div class="due">
@@ -140,7 +143,7 @@
   <figure class="figura">
     <figcaption><span class="etichetta">Figura 6 · Analisi di sensibilità</span>
       <h3>Quanto cambia l'esito se cambia un'ipotesi</h3>
-      <p>Si fa variare un parametro e si lasciano fermi gli altri. Una curva ripida indica un meccanismo su cui vale la pena raccogliere dati reali.</p></figcaption>
+      <p>Si fa variare un parametro e si lasciano fermi gli altri. Ogni punto è la media di 100 esecuzioni. Una curva ripida indica un meccanismo su cui vale la pena raccogliere dati reali.</p></figcaption>
     <div class="scelta-sens" role="group" aria-label="Parametro da far variare" id="scelta-sens"></div>
     <div class="diagramma" id="fig-sens"></div>
   </figure>
@@ -169,12 +172,13 @@
     <summary>S1 · Microsimulazione del percorso di accesso (figure 3-6) <span class="statuto simulato">simulato</span></summary>
     <dl class="scheda">
       <dt>Domanda</dt><dd>Quali meccanismi possono generare uno scarto fra aventi diritto e fruitori, e quanto pesa ciascuno?</dd>
-      <dt>Statuto</dt><dd>[P] Proposta originale. Esperimento computazionale illustrativo, non calibrato né validato.</dd>
+      <dt>Statuto</dt><dd>[P] Proposta originale. Esperimento computazionale illustrativo svolto, non calibrato né validato.</dd>
       <dt>Fondamento</dt><dd>[F] Tesi, cap. III: la simulazione produce conseguenze che dipendono dalle ipotesi del modello e l'analisi di sensibilità verifica quanto cambiano al variare delle ipotesi (K.G. Troitzsch, <i>Legislation, Regulatory Impact Assessment and Simulation</i>, pp. 58 e 73-74, come citato nella tesi, nota 420). [F] Passaggi del percorso: figura 5 del primo prototipo (art. 33, commi 3, 5, 6-bis; art. 4).</dd>
-      <dt>Modello</dt><dd>1.000 agenti, 12 mesi, rete casuale di contatti. Ogni mese: chi non conosce il diritto può apprenderlo dai contatti informati; chi lo conosce attende l'accertamento (durata casuale con media diversa nei territori A e B); poi presenta la domanda con una certa probabilità; poi fruisce, salvo ostacolo del datore. Seme fisso: stessi parametri, stesso risultato.</dd>
+      <dt>Modello</dt><dd>1.000 agenti, 12 mesi, rete casuale di contatti. Ogni mese: chi non conosce il diritto può apprenderlo dai contatti informati; chi lo conosce attende l'accertamento (durata casuale con media diversa nei territori A e B); poi presenta la domanda con una certa probabilità; poi fruisce, salvo ostacolo del datore. Ogni scenario è eseguito 100 volte con semi da 1 a 100: la pagina riporta la media, il minimo e il massimo. Le figure 3 e 5 mostrano una sola esecuzione (seme 104). Stessi parametri, stesso risultato.</dd>
       <dt>Ipotesi</dt><dd>Tutti i valori di base sono ipotetici: 40% informato all'inizio, 4 contatti, 5% di probabilità mensile di passaparola per contatto informato, accertamento in 4 mesi in A e 9 in B, 80% presenta la domanda, 10% incontra ostacoli.</dd>
-      <dt>Limiti</dt><dd>I territori A e B non sono regioni reali. Il modello ignora reddito, genere, tipo di lavoro, rinunce volontarie. Gli scenari non sono proposte di riforma.</dd>
-      <dt>Verifica</dt><dd>8 test: riproducibilità, conservazione degli agenti, casi limite (nessun ostacolo: fruiscono tutti; nessuna informazione: nessuno), monotonia rispetto all'informazione.</dd>
+      <dt>Termini di legge</dt><dd>[F] La commissione deve pronunciarsi entro 90 giorni; se non si pronuncia entro 45, l'accertamento si può fare in via provvisoria ai fini dei permessi (d.l. 324/1993, art. 2, commi 2 e 3-bis, nel corpus del secondo prototipo). I tempi del modello sono più lunghi: esplorano che cosa accade se i termini non sono rispettati. Lo scenario "tre mesi" usa il termine di 90 giorni come media.</dd>
+      <dt>Limiti</dt><dd>I territori A e B non sono regioni reali. Il modello ignora reddito, genere, tipo di lavoro, rinunce volontarie e l'accertamento provvisorio. Non è calibrato né validato: non raggiunge neppure la validazione replicativa di Troitzsch, perché mancano i dati del passato da riprodurre. Gli scenari non sono proposte di riforma.</dd>
+      <dt>Verifica</dt><dd>13 test: riproducibilità, conservazione degli agenti, casi limite (nessun ostacolo: fruiscono tutti; nessuna informazione: nessuno), monotonia rispetto all'informazione; per le ripetizioni: stesso risultato a ogni esecuzione, media fra minimo e massimo, fasi che sommano a 1, scarto fra territori nullo con tempi uguali.</dd>
     </dl>
   </details>
 </section>

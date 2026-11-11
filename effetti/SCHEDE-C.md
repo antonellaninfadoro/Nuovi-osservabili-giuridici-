@@ -1,6 +1,6 @@
-# Terzo prototipo · Schede metodologiche (bozza v0.1, 4 novembre 2026)
+# Terzo prototipo · Schede metodologiche (v0.2, 11 novembre 2026)
 
-Stato: **da approvare dal relatore**. Livello 3: dati ufficiali, pochi. Livello 4: simulazione illustrativa, non calibrata né validata.
+Stato: **esperimento illustrativo svolto**, presentato nella tesi (cap. IV, § 2, c). Livello 3: dati ufficiali, pochi. Livello 4: simulazione illustrativa eseguita e ripetuta 100 volte, non calibrata né validata.
 
 Legenda: **[F]** fonte documentata · **[A]** adattamento · **[P]** proposta originale · **[V]** da verificare
 
@@ -27,9 +27,10 @@ Legenda: **[F]** fonte documentata · **[A]** adattamento · **[P]** proposta or
 | Domanda | Quali meccanismi possono generare uno scarto fra aventi diritto e fruitori, e quanto pesa ciascuno? |
 | Statuto | [P] Esperimento illustrativo. Nessun numero descrive la realtà. |
 | Fondamento | [F] Tesi, cap. III, terza regola della griglia, e nota 420 (Troitzsch, pp. 58 e 73-74): esiti dipendenti dalle ipotesi, analisi di sensibilità. [F] Passaggi: figura 5 del primo prototipo. |
-| Modello | 1.000 agenti, 12 mesi, rete casuale (4 contatti). Mese per mese: passaparola; attesa dell'accertamento (esponenziale, media diversa in A e B); domanda; fruizione salvo ostacolo. Seme fisso 104. Codice: effetti/modello.js. |
+| Modello | 1.000 agenti, 12 mesi, rete casuale (4 contatti). Mese per mese: passaparola; attesa dell'accertamento (esponenziale, media diversa in A e B); domanda; fruizione salvo ostacolo. Ogni scenario ripetuto 100 volte (semi 1-100): media, minimo, massimo. Figure 3 e 5: una sola esecuzione, seme 104. Codice: effetti/modello.js. |
 | Ipotesi di base | informati 40%; passaparola 5%/mese per contatto informato; accertamento 4 mesi (A), 9 (B); domanda 80%; ostacolo 10%. |
-| Scenari | informazione d'ufficio (90% informati); accertamento rapido in B (4 mesi); meno ostacoli (2%). Non sono proposte di riforma. |
-| Esiti di base | fruisce il 47,8% (A 56%, B 39%). |
-| Limiti | Territori ipotetici; nessuna eterogeneità di reddito, genere, lavoro; nessuna rinuncia volontaria; nessuna calibrazione. |
-| Verifica | 8 test (effetti/test-modello.js): riproducibilità; conservazione degli agenti; monotonia nel tempo; casi limite; monotonia rispetto all'informazione; effetto dei tempi. |
+| Scenari | informazione d'ufficio (90% informati); accertamento rapido in B (4 mesi); tre mesi in entrambi i territori (termine di 90 giorni del d.l. 324/1993, art. 2, c. 3-bis, usato come media); meno ostacoli (2%); tutti gli interventi insieme. Non sono proposte di riforma. |
+| Esiti (media di 100 esecuzioni) | base 44,6% (40,0-48,4; A 51,5%, B 37,8%); informazione 59,8%; B rapido 51,6% (A 51,5%, B 51,7%); tre mesi 54,6%; meno ostacoli 48,6%; tutti 73,3%. Fasi finali nella base: non informati 14,1%, in attesa 23,8%, accertati senza domanda 12,4%, ostacolati 5,0%. Con il solo seme 104 la base dà 47,8%. |
+| Sensibilità (media di 100) | informati 10% → 19,3%, 90% → 59,8%; passaparola 0 → 24,6%; attesa in B 2 mesi → 54,5%, 12 → 41,7%; domanda 60% → 33,4%, 100% → 55,8%; ostacoli 0 → 49,6%, 20% → 39,7%; orizzonte 6 mesi → 26,0%, 24 → 64,6%. |
+| Limiti | Territori ipotetici; nessuna eterogeneità di reddito, genere, lavoro; nessuna rinuncia volontaria; accertamento provvisorio non rappresentato; nessuna calibrazione né validazione. |
+| Verifica | 13 test (effetti/test-modello.js): riproducibilità; conservazione degli agenti; monotonia nel tempo; casi limite; monotonia rispetto all'informazione; effetto dei tempi; ripetizioni (stabilità, media fra minimo e massimo, fasi che sommano a 1, nessuno scarto fra territori con tempi uguali, sensibilità monotona). |

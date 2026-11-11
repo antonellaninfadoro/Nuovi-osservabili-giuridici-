@@ -92,15 +92,35 @@
       fruizione: fin[4] / p.n, fruizioneA: quota('A'), fruizioneB: quota('B') };
   }
 
-  // Analisi di sensibilita': quota che fruisce al variare di un parametro.
-  function sensibilita(par, nome, valori) {
+  // Ripetizioni: lo stesso esperimento con semi diversi (1..volte).
+  // Restituisce la media, il minimo e il massimo della quota che fruisce,
+  // le medie per territorio e la composizione media per fase alla fine.
+  var RIPETIZIONI = 100;
+  function ripeti(par, volte) {
+    volte = volte || RIPETIZIONI;
+    var tot = 0, totA = 0, totB = 0, min = 1, max = 0, fasi = [0, 0, 0, 0, 0];
+    for (var s = 1; s <= volte; s++) {
+      var q = {}; for (var k in par) q[k] = par[k]; q.seme = s;
+      var r = simula(q);
+      tot += r.fruizione; totA += r.fruizioneA; totB += r.fruizioneB;
+      if (r.fruizione < min) min = r.fruizione;
+      if (r.fruizione > max) max = r.fruizione;
+      r.finale.forEach(function (x, i) { fasi[i] += x / r.parametri.n / volte; });
+    }
+    return { volte: volte, media: tot / volte, min: min, max: max,
+      mediaA: totA / volte, mediaB: totB / volte, fasi: fasi };
+  }
+
+  // Analisi di sensibilita': quota che fruisce al variare di un parametro,
+  // come media di 'volte' ripetizioni (con volte = 1: una sola esecuzione, seme dei parametri).
+  function sensibilita(par, nome, valori, volte) {
     return valori.map(function (v) {
       var q = {}; for (var k in par) q[k] = par[k]; q[nome] = v;
-      return { valore: v, fruizione: simula(q).fruizione };
+      return { valore: v, fruizione: volte ? ripeti(q, volte).media : simula(q).fruizione };
     });
   }
 
-  var api = { rng: rng, simula: simula, sensibilita: sensibilita, BASE: BASE, FASI: FASI };
+  var api = { rng: rng, simula: simula, ripeti: ripeti, sensibilita: sensibilita, RIPETIZIONI: RIPETIZIONI, BASE: BASE, FASI: FASI };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.ModelloC = api;
 })(this);

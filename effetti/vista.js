@@ -92,9 +92,13 @@
     base: {},
     informazione: { infoIniziale: 0.9 },
     tempi: { tempoB: M.BASE.tempoA },
-    garanzia: { ostacolo: 0.02 }
+    termine: { tempoA: 3, tempoB: 3 },
+    garanzia: { ostacolo: 0.02 },
+    tutti: { infoIniziale: 0.9, tempoB: M.BASE.tempoA, ostacolo: 0.02 }
   };
-  var par = {}, base = M.simula(M.BASE), sensK = 'infoIniziale';
+  // I numeri della pagina sono medie di M.RIPETIZIONI esecuzioni con semi diversi.
+  // Le figure 3 e 5 mostrano una sola esecuzione (seme 104), come esempio.
+  var par = {}, base = M.ripeti(M.BASE), baseUna = M.simula(M.BASE), sensK = 'infoIniziale', rip = null, attesa = null;
   function copia(o) { var c = {}; for (var k in o) c[k] = o[k]; return c; }
 
   function costruisciComandi() {
@@ -115,7 +119,7 @@
       var b = e.target.closest('[data-sens]'); if (!b) return;
       sensK = b.getAttribute('data-sens');
       document.querySelectorAll('[data-sens]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-      figSens();
+      setTimeout(figSens, 0);
     });
     document.querySelectorAll('[data-scenario]').forEach(function (b) {
       b.addEventListener('click', function () { applica(b.getAttribute('data-scenario')); });
@@ -133,14 +137,23 @@
   }
 
   var ultimo = null;
+  function pct1(x) { return fmt(x * 100, 1) + '%'; }
   function aggiorna() {
     PARAMETRI.forEach(function (p) { $('p-' + p.k).value = par[p.k]; $('v-' + p.k).textContent = p.f(par[p.k]); });
     ultimo = M.simula(par);
-    var d = ultimo.fruizione - base.fruizione;
-    $('r-quota').textContent = pct(ultimo.fruizione);
-    $('r-testo').textContent = 'delle persone ipotetiche con i requisiti fruisce dei permessi dopo 12 mesi (territorio A ' + pct(ultimo.fruizioneA) + ', B ' + pct(ultimo.fruizioneB) + '). ' +
-      (Math.abs(d) < 0.0005 ? 'È l\'ipotesi di base.' : (d > 0 ? '+' : '−') + fmt(Math.abs(d) * 100, 0) + ' punti rispetto all\'ipotesi di base (' + pct(base.fruizione) + ').');
-    figAgenti(); figImbuto(); figMesi(); figSens();
+    figAgenti(); figMesi();
+    $('r-quota').classList.add('in-calcolo');
+    clearTimeout(attesa);
+    attesa = setTimeout(function () {
+      rip = M.ripeti(par);
+      var d = rip.media - base.media;
+      $('r-quota').classList.remove('in-calcolo');
+      $('r-quota').textContent = pct1(rip.media);
+      $('r-testo').textContent = 'delle persone ipotetiche con i requisiti fruisce dei permessi dopo 12 mesi: media di ' + rip.volte + ' esecuzioni, fra ' + pct1(rip.min) + ' e ' + pct1(rip.max) +
+        ' (territorio A ' + pct1(rip.mediaA) + ', B ' + pct1(rip.mediaB) + '). ' +
+        (Math.abs(d) < 0.0005 ? 'È l\'ipotesi di base.' : (d > 0 ? '+' : '−') + fmt(Math.abs(d) * 100, 1) + ' punti rispetto all\'ipotesi di base (' + pct1(base.media) + ').');
+      figImbuto(); figSens();
+    }, 150);
   }
 
   function figAgenti() {
@@ -154,18 +167,18 @@
       });
       var q = g.filter(function (a) { return a.fase === 4; }).length;
       var box = document.createElement('div'); box.className = 'griglia';
-      box.innerHTML = '<h4>Territorio ' + t + ' · accertamento in ' + par['tempo' + t] + ' mesi · fruisce ' + q + ' su ' + g.length + '</h4>';
+      box.innerHTML = '<h4>Territorio ' + t + ' · accertamento in ' + par['tempo' + t] + ' mesi · in questa esecuzione fruisce ' + q + ' su ' + g.length + '</h4>';
       box.appendChild(svg); cont.appendChild(box);
     });
   }
 
-  function cumul(conta, da) { var s = 0; for (var i = da; i < conta.length; i++) s += conta[i]; return s; }
+  function cumul(quote, da, n) { var s = 0; for (var i = da; i < quote.length; i++) s += quote[i]; return Math.round(s * n); }
   function figImbuto() {
     var W = 420, H = 230, X0 = 150, L = W - X0 - 50, n = par.n;
     var passi = ['ha i requisiti', 'conosce il diritto', 'è accertato', 'presenta domanda', 'fruisce'];
     var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Persone che superano ciascun passaggio' });
     passi.forEach(function (p, i) {
-      var v = i === 0 ? n : cumul(ultimo.finale, i), vb = i === 0 ? n : cumul(base.finale, i), y = 14 + i * 42;
+      var v = i === 0 ? n : cumul(rip.fasi, i, n), vb = i === 0 ? n : cumul(base.fasi, i, n), y = 14 + i * 42;
       svg.appendChild(el('text', { x: X0 - 10, y: y + 17, 'text-anchor': 'end', class: 'lbl' }, [p]));
       svg.appendChild(el('rect', { x: X0, y: y, width: L, height: 26, rx: 3, class: 'imb-perdita' }));
       svg.appendChild(el('rect', { x: X0, y: y, width: L * v / n, height: 26, rx: 3, class: 'imb-barra' }, [el('title', {}, [p + ': ' + v + ' su ' + n])]));
@@ -173,7 +186,7 @@
       svg.appendChild(el('text', { x: X0 + L + 8, y: y + 17, class: 'val' }, [String(v)]));
     });
     $('fig-imbuto').innerHTML = ''; $('fig-imbuto').appendChild(svg);
-    $('fig-imbuto').insertAdjacentHTML('beforeend', '<p class="nota">Barra: scenario corrente. Tratteggio nero: ipotesi di base.</p>');
+    $('fig-imbuto').insertAdjacentHTML('beforeend', '<p class="nota">Media di ' + rip.volte + ' esecuzioni, su 1.000 persone. Barra: scenario corrente. Tratteggio nero: ipotesi di base.</p>');
   }
 
   function linea(serie, x, y) { return serie.map(function (s, i) { return (i ? 'L' : 'M') + x(s.mese).toFixed(1) + ' ' + y(s.conta[4] / par.n).toFixed(1); }).join(' '); }
@@ -186,16 +199,16 @@
       svg.appendChild(el('text', { x: X0 - 6, y: y(q) + 4, 'text-anchor': 'end', class: 'lbl' }, [pct(q)]));
     });
     [0, 3, 6, 9, 12].forEach(function (m) { svg.appendChild(el('text', { x: x(m), y: Y0 + 18, 'text-anchor': 'middle', class: 'lbl' }, [m ? 'mese ' + m : 'inizio'])); });
-    svg.appendChild(el('path', { d: linea(base.serie, x, y), class: 'linea-base' }));
+    svg.appendChild(el('path', { d: linea(baseUna.serie, x, y), class: 'linea-base' }));
     svg.appendChild(el('path', { d: linea(ultimo.serie, x, y), class: 'linea-scen' }));
     $('fig-mesi').innerHTML = ''; $('fig-mesi').appendChild(svg);
-    $('fig-mesi').insertAdjacentHTML('beforeend', '<p class="nota">Linea piena: scenario corrente. Tratteggio: ipotesi di base.</p>');
+    $('fig-mesi').insertAdjacentHTML('beforeend', '<p class="nota">Una sola esecuzione (seme 104). Linea piena: scenario corrente. Tratteggio: ipotesi di base.</p>');
   }
 
   function figSens() {
     var p = PARAMETRI.filter(function (q) { return q.k === sensK; })[0];
     var valori = []; for (var i = 0; i <= 10; i++) valori.push(+(p.min + (p.max - p.min) * i / 10).toFixed(4));
-    var dati = M.sensibilita(par, sensK, valori);
+    var dati = M.sensibilita(par, sensK, valori, M.RIPETIZIONI);
     var W = 760, H = 240, X0 = 50, X1 = W - 20, Y0 = 200, Y1 = 14;
     var x = function (v) { return X0 + (v - p.min) / (p.max - p.min) * (X1 - X0); }, y = function (q) { return Y0 - q * (Y0 - Y1); };
     var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Sensibilità della quota che fruisce a: ' + p.nome });
@@ -207,7 +220,7 @@
     svg.appendChild(el('text', { x: (X0 + X1) / 2, y: Y0 + 36, 'text-anchor': 'middle', class: 'lbl' }, [p.nome]));
     svg.appendChild(el('path', { d: dati.map(function (d, i) { return (i ? 'L' : 'M') + x(d.valore).toFixed(1) + ' ' + y(d.fruizione).toFixed(1); }).join(' '), class: 'linea-sens' }));
     dati.forEach(function (d) { svg.appendChild(el('circle', { cx: x(d.valore), cy: y(d.fruizione), r: 4, class: 'punto-sens' }, [el('title', {}, [p.f(d.valore) + ': fruisce ' + pct(d.fruizione)])])); });
-    svg.appendChild(el('circle', { cx: x(par[sensK]), cy: y(ultimo.fruizione), r: 7, class: 'punto-qui' }, [el('title', {}, ['scenario corrente'])]));
+    svg.appendChild(el('circle', { cx: x(par[sensK]), cy: y(rip.media), r: 7, class: 'punto-qui' }, [el('title', {}, ['scenario corrente'])]));
     $('fig-sens').innerHTML = ''; $('fig-sens').appendChild(svg);
   }
 
